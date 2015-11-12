@@ -1,12 +1,11 @@
 package sky.cucumber.stepDefinitions;
 
 
-import org.junit.Assert;
+import static org.junit.Assert.*;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import sky.browser.AbstractBrowser;
-import sky.browser.BrowserInterface;
 import sky.cucumber.pageObjects.BetSlip;
 import sky.cucumber.pageObjects.HomePage;
 import cucumber.api.java.After;
@@ -15,7 +14,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class HomePageStepDefinitions extends AbstractBrowser {
+public class HomePageStepDefinitions extends AbstractBrowser{
 
 	private HomePage homePage;
 	private BetSlip betSlip;
@@ -41,12 +40,11 @@ public class HomePageStepDefinitions extends AbstractBrowser {
 
 	@Then("^the betslip should appear$")
 	public void the_betslip_should_appear() {
-		Assert.assertTrue(betSlip.isBetSlipVisible());
+		assertTrue(betSlip.isBetSlipVisible());
 	}
 	
 	@After
 	public void close(){
 		driver.close();
 	}
-
 }

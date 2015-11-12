@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="sky.cucumber.automation.RunTest" time="41.696" errors="2" skipped="1">
+<testsuite tests="4" failures="0" name="sky.cucumber.automation.RunTest" time="20.113" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="c:\Program Files (x86)\Java\jdk1.8.0_45\jre\bin"/>
@@ -22,7 +22,7 @@
     <property name="basedir" value="c:\Users\Michael Dally\workspace\sky.cucumber.automation"/>
     <property name="java.endorsed.dirs" value="c:\Program Files (x86)\Java\jdk1.8.0_45\jre\lib\endorsed"/>
     <property name="os.arch" value="x86"/>
-    <property name="surefire.real.class.path" value="C:\Users\MICHAE~1\AppData\Local\Temp\surefirebooter484189103444839411.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\MICHAE~1\AppData\Local\Temp\surefirebooter2045754793894847318.jar"/>
     <property name="java.io.tmpdir" value="C:\Users\MICHAE~1\AppData\Local\Temp\"/>
     <property name="line.separator" value="
 "/>
@@ -46,7 +46,7 @@
     <property name="java.vm.specification.version" value="1.8"/>
     <property name="sun.arch.data.model" value="32"/>
     <property name="java.home" value="c:\Program Files (x86)\Java\jdk1.8.0_45\jre"/>
-    <property name="sun.java.command" value="C:\Users\MICHAE~1\AppData\Local\Temp\surefirebooter484189103444839411.jar C:\Users\MICHAE~1\AppData\Local\Temp\surefire3753945008936311227tmp C:\Users\MICHAE~1\AppData\Local\Temp\surefire8633570590288775083tmp"/>
+    <property name="sun.java.command" value="C:\Users\MICHAE~1\AppData\Local\Temp\surefirebooter2045754793894847318.jar C:\Users\MICHAE~1\AppData\Local\Temp\surefire5515796075807107811tmp C:\Users\MICHAE~1\AppData\Local\Temp\surefire7169038781273284562tmp"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
     <property name="user.language" value="en"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -63,80 +63,8 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86"/>
   </properties>
-  <testcase classname="Scenario: Place multiple bets" name="Given I have arrived on the website" time="0"/>
-  <testcase classname="Scenario: Place multiple bets" name="When I place &quot;3&quot; bets" time="0">
-    <error message="Element is not currently visible and so may not be interacted with
-Command duration or timeout: 30.11 seconds
-Build info: version: &apos;2.48.2&apos;, revision: &apos;41bccdd10cf2c0560f637404c2d96164b67d9d67&apos;, time: &apos;2015-10-09 13:08:06&apos;
-System info: host: &apos;W8150602&apos;, ip: &apos;172.18.101.96&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_45&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=42.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 9dcd0795-d67c-4662-bad7-164a70c314bc" type="org.openqa.selenium.ElementNotVisibleException">org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Command duration or timeout: 30.11 seconds
-Build info: version: &apos;2.48.2&apos;, revision: &apos;41bccdd10cf2c0560f637404c2d96164b67d9d67&apos;, time: &apos;2015-10-09 13:08:06&apos;
-System info: host: &apos;W8150602&apos;, ip: &apos;172.18.101.96&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_45&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=42.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 9dcd0795-d67c-4662-bad7-164a70c314bc
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:326)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at sky.cucumber.pageObjects.HomePage.clickRandomSelections(HomePage.java:45)
-	at sky.cucumber.stepDefinitions.HomePageStepDefinitions.i_place_bets(HomePageStepDefinitions.java:37)
-	at ✽.When I place &quot;3&quot; bets(skyNavigation.feature:9)
-Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Build info: version: &apos;2.48.2&apos;, revision: &apos;41bccdd10cf2c0560f637404c2d96164b67d9d67&apos;, time: &apos;2015-10-09 13:08:06&apos;
-System info: host: &apos;W8150602&apos;, ip: &apos;172.18.101.96&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_45&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.fxdriver.preconditions.visible(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous8411695228400513678webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9981)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous8411695228400513678webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12517)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous8411695228400513678webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12534)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous8411695228400513678webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:621)
-</error>
-  </testcase>
-  <testcase classname="Scenario: Place multiple bets" name="Scenario: Place multiple bets" time="0.016">
-    <error message="Element is not currently visible and so may not be interacted with
-Command duration or timeout: 30.11 seconds
-Build info: version: &apos;2.48.2&apos;, revision: &apos;41bccdd10cf2c0560f637404c2d96164b67d9d67&apos;, time: &apos;2015-10-09 13:08:06&apos;
-System info: host: &apos;W8150602&apos;, ip: &apos;172.18.101.96&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_45&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=42.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 9dcd0795-d67c-4662-bad7-164a70c314bc" type="org.openqa.selenium.ElementNotVisibleException">org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Command duration or timeout: 30.11 seconds
-Build info: version: &apos;2.48.2&apos;, revision: &apos;41bccdd10cf2c0560f637404c2d96164b67d9d67&apos;, time: &apos;2015-10-09 13:08:06&apos;
-System info: host: &apos;W8150602&apos;, ip: &apos;172.18.101.96&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_45&apos;
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=42.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 9dcd0795-d67c-4662-bad7-164a70c314bc
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:326)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at sky.cucumber.pageObjects.HomePage.clickRandomSelections(HomePage.java:45)
-	at sky.cucumber.stepDefinitions.HomePageStepDefinitions.i_place_bets(HomePageStepDefinitions.java:37)
-	at ✽.When I place &quot;3&quot; bets(skyNavigation.feature:9)
-Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Build info: version: &apos;2.48.2&apos;, revision: &apos;41bccdd10cf2c0560f637404c2d96164b67d9d67&apos;, time: &apos;2015-10-09 13:08:06&apos;
-System info: host: &apos;W8150602&apos;, ip: &apos;172.18.101.96&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;x86&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_45&apos;
-Driver info: driver.version: unknown
-	at &lt;anonymous class&gt;.fxdriver.preconditions.visible(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous8411695228400513678webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9981)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous8411695228400513678webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12517)
-	at &lt;anonymous class&gt;.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous8411695228400513678webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12534)
-	at &lt;anonymous class&gt;.fxdriver.Timer.prototype.setTimeout/&lt;.notify(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous8411695228400513678webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:621)
-</error>
-  </testcase>
-  <testcase classname="Scenario: Place multiple bets" name="Then the betslip should appear" time="0.016">
-    <skipped/>
-  </testcase>
+  <testcase classname="Scenario: Place multiple bets" name="Given I have arrived on the website" time="0.007"/>
+  <testcase classname="Scenario: Place multiple bets" name="When I place &quot;3&quot; bets" time="0"/>
+  <testcase classname="Scenario: Place multiple bets" name="Then the betslip should appear" time="0"/>
+  <testcase classname="Scenario: Place multiple bets" name="Scenario: Place multiple bets" time="0.024"/>
 </testsuite>
