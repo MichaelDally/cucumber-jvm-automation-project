@@ -7,20 +7,23 @@ import java.util.Random;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 
 import sky.abstractPageObject.AbstractPageObject;
 import sky.synchroniser.Synchroniser;
 
 public class HomePage extends AbstractPageObject{
-	private By BETTING_CELL_LOCATOR = By.cssSelector(".odds");
-	private By EXPAND_ALL_LINK = By.cssSelector("#live-bet-bar .collapsed");
-	WebDriver driver;
-	Synchroniser synchroniser = new Synchroniser();
-
 	public HomePage(WebDriver driver){
 		this.driver = super.getDriver();
 	}
+	private By BETTING_CELL_LOCATOR = By.cssSelector(".live-table .odds");
+	private By EXPAND_ALL_LINK = By.cssSelector("#live-bet-bar .collapsed");
+	WebDriver driver;
+	Actions actions = new Actions(getDriver());
 
+	Synchroniser synchroniser = new Synchroniser();
+	
+	
 	private List<WebElement> getBettingCells(){
 		return driver.findElements(BETTING_CELL_LOCATOR);
 	}
@@ -37,11 +40,14 @@ public class HomePage extends AbstractPageObject{
 			randomlySelectedSelections.add(availableSelections.get(randomIndex));
 			availableSelections.remove(randomIndex);
 		}
+		System.out.println(availableSelections);
 		return randomlySelectedSelections;
 	}
 	
 	public void clickRandomSelections(int numberOfSelectionsToClickOn){
 		for (WebElement selection : getRandomSelections(numberOfSelectionsToClickOn)){
+			synchroniser.waitUntilElementVisable(selection,10);
+			actions.moveToElement(selection);
 			selection.click();
 		}
 	}
@@ -58,3 +64,4 @@ public class HomePage extends AbstractPageObject{
 	
 	
 }
+;

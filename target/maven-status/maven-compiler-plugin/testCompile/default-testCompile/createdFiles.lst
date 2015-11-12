@@ -5,7 +5,7 @@ sky\cucumber\stepDefinitions\LoginPageStepDefs.class
 sky\cucumber\pageObjects\BetSlip.class
 sky\abstractPageObject\AbstractPageObject.class
 sky\browser\BrowserInterface.class
+sky\actions\Actions.class
 sky\cucumber\automation\RunTest.class
 sky\browser\AbstractBrowser.class
-sky\cucumber\stepDefinitions\StepDefinitionInterface.class
 sky\cucumber\stepDefinitions\HomePageStepDefinitions.class

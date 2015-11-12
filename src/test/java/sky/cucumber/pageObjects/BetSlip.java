@@ -15,7 +15,7 @@ public class BetSlip extends AbstractPageObject{
 		this.driver = super.getDriver();
 	}
 	
-	private By BET_SLIP_CONTENT = By.cssSelector(".bet-slip-content");
+	private By BET_SLIP_CONTENT = By.cssSelector(".bet-slip .multi-list");
 	
 	public WebElement getBetSlipContentLocator(){
 		return driver.findElement(BET_SLIP_CONTENT);

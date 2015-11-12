@@ -2,7 +2,9 @@ package sky.cucumber.stepDefinitions;
 
 
 import static org.junit.Assert.*;
+
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 
 import sky.browser.AbstractBrowser;
@@ -19,6 +21,7 @@ public class HomePageStepDefinitions extends AbstractBrowser{
 	private HomePage homePage;
 	private BetSlip betSlip;
 	private WebDriver driver = getDriver(System.getProperty("browser"));
+	Actions actions;
 
 	@Before
 	public void setUp() {
@@ -42,9 +45,11 @@ public class HomePageStepDefinitions extends AbstractBrowser{
 	public void the_betslip_should_appear() {
 		assertTrue(betSlip.isBetSlipVisible());
 	}
-	
+
 	@After
-	public void close(){
-		driver.close();
+	public void close() {
+		driver.close();		
 	}
+	
+
 }

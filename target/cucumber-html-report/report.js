@@ -7,11 +7,11 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 4881402807,
+  "duration": 5186235988,
   "status": "passed"
 });
 formatter.before({
-  "duration": 2021019,
+  "duration": 2725016,
   "status": "passed"
 });
 formatter.scenario({
@@ -47,7 +47,7 @@ formatter.match({
   "location": "HomePageStepDefinitions.i_have_arrived_on_the_website()"
 });
 formatter.result({
-  "duration": 7709909241,
+  "duration": 10522193411,
   "status": "passed"
 });
 formatter.match({
@@ -60,19 +60,18 @@ formatter.match({
   "location": "HomePageStepDefinitions.i_place_bets(int)"
 });
 formatter.result({
-  "duration": 1723637422,
+  "duration": 1401738486,
   "status": "passed"
 });
 formatter.match({
   "location": "HomePageStepDefinitions.the_betslip_should_appear()"
 });
 formatter.result({
-  "duration": 10479649858,
-  "error_message": "org.openqa.selenium.TimeoutException: Timed out after 10 seconds waiting for visibility of [[FirefoxDriver: firefox on WINDOWS (1696a36d-611e-4554-ad3f-0b55759742cf)] -\u003e css selector: .bet-slip-content]\nBuild info: version: \u00272.48.2\u0027, revision: \u002741bccdd10cf2c0560f637404c2d96164b67d9d67\u0027, time: \u00272015-10-09 13:08:06\u0027\nSystem info: host: \u0027W8150602\u0027, ip: \u0027172.18.101.96\u0027, os.name: \u0027Windows 8.1\u0027, os.arch: \u0027x86\u0027, os.version: \u00276.3\u0027, java.version: \u00271.8.0_45\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities [{applicationCacheEnabled\u003dtrue, rotatable\u003dfalse, handlesAlerts\u003dtrue, databaseEnabled\u003dtrue, version\u003d42.0, platform\u003dWINDOWS, nativeEvents\u003dfalse, acceptSslCerts\u003dtrue, webStorageEnabled\u003dtrue, locationContextEnabled\u003dtrue, browserName\u003dfirefox, takesScreenshot\u003dtrue, javascriptEnabled\u003dtrue, cssSelectorsEnabled\u003dtrue}]\nSession ID: 1696a36d-611e-4554-ad3f-0b55759742cf\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)\r\n\tat sky.synchroniser.Synchroniser.waitUntilElementVisable(Synchroniser.java:24)\r\n\tat sky.cucumber.pageObjects.BetSlip.isBetSlipVisible(BetSlip.java:25)\r\n\tat sky.cucumber.stepDefinitions.HomePageStepDefinitions.the_betslip_should_appear(HomePageStepDefinitions.java:43)\r\n\tat ✽.Then the betslip should appear(skyNavigation.feature:10)\r\n",
-  "status": "failed"
+  "duration": 241474820,
+  "status": "passed"
 });
 formatter.after({
-  "duration": 18022612,
+  "duration": 22456069,
   "status": "passed"
 });
 });
