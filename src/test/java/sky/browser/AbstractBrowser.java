@@ -12,13 +12,12 @@ import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class AbstractBrowser {
+public class AbstractBrowser implements BrowserInterface {
 	protected static WebDriver driver;
-	protected static WebDriverWait wait;
 
 	public static WebDriver getDriver(String browserType) {
-		if(driver == null){
-		if (browserType.equalsIgnoreCase("Firefox")) {
+		if (driver == null) {
+			if (browserType.equalsIgnoreCase("Firefox")) {
 				ProfilesIni profile = new ProfilesIni();
 				FirefoxProfile myProfile = profile.getProfile("default");
 				myProfile.setAcceptUntrustedCertificates(true);
@@ -31,27 +30,17 @@ public class AbstractBrowser {
 			}
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			driver.manage().window().maximize();
-		return driver;
-		}else{
+			return driver;
+		} else {
 			return driver;
 		}
-	}
-
-	public void close() {
-		driver.close();
 	}
 
 	public void getUrl(String url) {
 		driver.get(url);
 	}
-	
-	public boolean waitUntilElementClickable(WebElement element){
-		return new WebDriverWait(driver,10).until(ExpectedConditions.elementToBeClickable(element)).isEnabled();
-	}
-	
-	public boolean waitUntilElementVisable(WebElement element, int timeout){
-		WebDriverWait wait = new WebDriverWait(driver,10);
-		return wait.until(ExpectedConditions.visibilityOf(element)) != null;
-	}
 
+	public void close() {
+		driver.close();
+	}
 }

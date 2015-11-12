@@ -9,11 +9,14 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import sky.abstractPageObject.AbstractPageObject;
+import sky.synchroniser.Synchroniser;
 
 public class HomePage extends AbstractPageObject{
-	private By BETTING_CELL_LOCATOR = By.cssSelector(".odds-cell");
+	private By BETTING_CELL_LOCATOR = By.cssSelector(".odds");
 	private By EXPAND_ALL_LINK = By.cssSelector("#live-bet-bar .collapsed");
 	WebDriver driver;
+	Synchroniser synchroniser = new Synchroniser();
+
 	public HomePage(WebDriver driver){
 		this.driver = super.getDriver();
 	}
@@ -43,7 +46,15 @@ public class HomePage extends AbstractPageObject{
 		}
 	}
 
-	public void clickExpandAll() {
-		getExpandAllLink().click();		
+	public void clickExpandAllLinkIfPresent() {
+		if(isExpandAllLinkPresent() == true){
+			getExpandAllLink().click();		
+		}
 	}
+	
+	public boolean isExpandAllLinkPresent(){
+		return synchroniser.waitUntilElementVisable(getExpandAllLink(), 10);
+	}
+	
+	
 }

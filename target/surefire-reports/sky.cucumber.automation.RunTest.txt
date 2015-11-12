@@ -1,15 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: sky.cucumber.automation.RunTest
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 4, Skipped: 1, Time elapsed: 77.526 sec <<< FAILURE!
-When I place "3" bets(Scenario: Place multiple bets)  Time elapsed: 0.015 sec  <<< ERROR!
+Tests run: 4, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 41.712 sec <<< FAILURE!
+When I place "3" bets(Scenario: Place multiple bets)  Time elapsed: 0.016 sec  <<< ERROR!
 org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Command duration or timeout: 30.04 seconds
+Command duration or timeout: 30.11 seconds
 Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
 System info: host: 'W8150602', ip: '172.18.101.96', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_45'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=42.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 5c112507-344a-4da8-a2fb-37514b0898aa
+Session ID: 9dcd0795-d67c-4662-bad7-164a70c314bc
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -19,26 +19,26 @@ Session ID: 5c112507-344a-4da8-a2fb-37514b0898aa
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:326)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at sky.cucumber.pageObjects.HomePage.clickRandomSelections(HomePage.java:42)
-	at sky.cucumber.stepDefinitions.HomePageStepDefinitions.i_place_bets(HomePageStepDefinitions.java:36)
+	at sky.cucumber.pageObjects.HomePage.clickRandomSelections(HomePage.java:45)
+	at sky.cucumber.stepDefinitions.HomePageStepDefinitions.i_place_bets(HomePageStepDefinitions.java:37)
 	at ?.When I place "3" bets(skyNavigation.feature:9)
 Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
 Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
 System info: host: 'W8150602', ip: '172.18.101.96', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_45'
 Driver info: driver.version: unknown
-	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous5555672315907601130webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9981)
-	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous5555672315907601130webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12517)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous5555672315907601130webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12534)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous5555672315907601130webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:621)
+	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous8411695228400513678webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9981)
+	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous8411695228400513678webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12517)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous8411695228400513678webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12534)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous8411695228400513678webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:621)
 
-Scenario: Place multiple bets  Time elapsed: 0.015 sec  <<< ERROR!
+Scenario: Place multiple bets  Time elapsed: 0.016 sec  <<< ERROR!
 org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Command duration or timeout: 30.04 seconds
+Command duration or timeout: 30.11 seconds
 Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
 System info: host: 'W8150602', ip: '172.18.101.96', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_45'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=42.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 5c112507-344a-4da8-a2fb-37514b0898aa
+Session ID: 9dcd0795-d67c-4662-bad7-164a70c314bc
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
 	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -48,73 +48,15 @@ Session ID: 5c112507-344a-4da8-a2fb-37514b0898aa
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:326)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at sky.cucumber.pageObjects.HomePage.clickRandomSelections(HomePage.java:42)
-	at sky.cucumber.stepDefinitions.HomePageStepDefinitions.i_place_bets(HomePageStepDefinitions.java:36)
+	at sky.cucumber.pageObjects.HomePage.clickRandomSelections(HomePage.java:45)
+	at sky.cucumber.stepDefinitions.HomePageStepDefinitions.i_place_bets(HomePageStepDefinitions.java:37)
 	at ?.When I place "3" bets(skyNavigation.feature:9)
 Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
 Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
 System info: host: 'W8150602', ip: '172.18.101.96', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_45'
 Driver info: driver.version: unknown
-	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous5555672315907601130webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9981)
-	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous5555672315907601130webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12517)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous5555672315907601130webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12534)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous5555672315907601130webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:621)
-
-When I select login(Scenario: Successful login)  Time elapsed: 0 sec  <<< ERROR!
-org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Command duration or timeout: 30.13 seconds
-Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
-System info: host: 'W8150602', ip: '172.18.101.96', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_45'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=42.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 5c112507-344a-4da8-a2fb-37514b0898aa
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:326)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at sky.cucumber.pageObjects.LoginPage.clickRandomSelections(LoginPage.java:43)
-	at sky.cucumber.stepDefinitions.LoginPageStepDefs.i_select_login(LoginPageStepDefs.java:25)
-	at ?.When I select login(skyNavigation.feature:15)
-Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
-System info: host: 'W8150602', ip: '172.18.101.96', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_45'
-Driver info: driver.version: unknown
-	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous5555672315907601130webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9981)
-	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous5555672315907601130webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12517)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous5555672315907601130webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12534)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous5555672315907601130webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:621)
-
-Scenario: Successful login  Time elapsed: 0 sec  <<< ERROR!
-org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Command duration or timeout: 30.13 seconds
-Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
-System info: host: 'W8150602', ip: '172.18.101.96', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_45'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=42.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 5c112507-344a-4da8-a2fb-37514b0898aa
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:326)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)
-	at sky.cucumber.pageObjects.LoginPage.clickRandomSelections(LoginPage.java:43)
-	at sky.cucumber.stepDefinitions.LoginPageStepDefs.i_select_login(LoginPageStepDefs.java:25)
-	at ?.When I select login(skyNavigation.feature:15)
-Caused by: org.openqa.selenium.ElementNotVisibleException: Element is not currently visible and so may not be interacted with
-Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
-System info: host: 'W8150602', ip: '172.18.101.96', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_45'
-Driver info: driver.version: unknown
-	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous5555672315907601130webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9981)
-	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous5555672315907601130webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12517)
-	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous5555672315907601130webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12534)
-	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous5555672315907601130webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:621)
+	at <anonymous class>.fxdriver.preconditions.visible(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous8411695228400513678webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:9981)
+	at <anonymous class>.DelayedCommand.prototype.checkPreconditions_(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous8411695228400513678webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12517)
+	at <anonymous class>.DelayedCommand.prototype.executeInternal_/h(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous8411695228400513678webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:12534)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/Users/MICHAE~1/AppData/Local/Temp/anonymous8411695228400513678webdriver-profile/extensions/fxdriver@googlecode.com/components/command-processor.js:621)
 

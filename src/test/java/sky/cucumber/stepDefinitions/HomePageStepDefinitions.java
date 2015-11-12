@@ -6,8 +6,10 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import sky.browser.AbstractBrowser;
+import sky.browser.BrowserInterface;
 import sky.cucumber.pageObjects.BetSlip;
 import sky.cucumber.pageObjects.HomePage;
+import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -28,17 +30,23 @@ public class HomePageStepDefinitions extends AbstractBrowser {
 	@Given("^I have arrived on the website$")
 	public void i_have_arrived_on_the_website() throws Throwable {
 		driver.navigate().to(System.getProperty("url"));
+		
 	}
 
 	@When("^I place \"([^\"]*)\" bets$")
 	public void i_place_bets(int numberOfSelections) throws Throwable {
-		//homePage.clickExpandAll();
+		homePage.clickExpandAllLinkIfPresent();
 		homePage.clickRandomSelections(numberOfSelections);
 	}
 
 	@Then("^the betslip should appear$")
 	public void the_betslip_should_appear() {
 		Assert.assertTrue(betSlip.isBetSlipVisible());
+	}
+	
+	@After
+	public void close(){
+		driver.close();
 	}
 
 }

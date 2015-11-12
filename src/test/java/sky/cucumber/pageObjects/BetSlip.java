@@ -1,9 +1,5 @@
 package sky.cucumber.pageObjects;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -12,9 +8,9 @@ import sky.abstractPageObject.AbstractPageObject;
 import sky.synchroniser.Synchroniser;
 
 public class BetSlip extends AbstractPageObject{
-	private By BET_SLIP_CONTENT_LOCATOR = By.cssSelector(".bet-slip-content");
 	WebDriver driver;
 	Synchroniser synchroniser = new Synchroniser();
+	
 	public BetSlip(WebDriver driver){
 		this.driver = super.getDriver();
 	}
@@ -28,6 +24,4 @@ public class BetSlip extends AbstractPageObject{
 	public boolean isBetSlipVisible(){
 		return synchroniser.waitUntilElementVisable(getBetSlipContentLocator(), 10);
 	}
-	
-	
 }
