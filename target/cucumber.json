@@ -1,0 +1,101 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 5551350751,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginPageStepDefs.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 3239601,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomePageStepDefinitions.setUp()"
+            }
+          }
+        ],
+        "line": 7,
+        "name": "Place multiple bets",
+        "description": "",
+        "id": "user-places-bet;place-multiple-bets",
+        "after": [
+          {
+            "result": {
+              "duration": 15387171,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomePageStepDefinitions.close()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 8657176154,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I have arrived on the website",
+            "match": {
+              "location": "HomePageStepDefinitions.i_have_arrived_on_the_website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 1311692141,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I place \"3\" bets",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 9
+                }
+              ],
+              "location": "HomePageStepDefinitions.i_place_bets(int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 287111017,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "the betslip should appear",
+            "match": {
+              "location": "HomePageStepDefinitions.the_betslip_should_appear()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "line": 6,
+            "name": "@wip"
+          }
+        ]
+      }
+    ],
+    "name": "User places bet",
+    "description": "In order to place bets\r\nAs a customer\r\nI want to be able to add bets to my betslip",
+    "id": "user-places-bet",
+    "keyword": "Feature",
+    "uri": "skyNavigation.feature"
+  }
+]

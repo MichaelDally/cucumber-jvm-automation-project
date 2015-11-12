@@ -1,4 +1,4 @@
-package sky.browser;
+package sky.interfaces;
 
 public interface BrowserInterface {
 public void close();

@@ -40,7 +40,6 @@ public class HomePage extends AbstractPageObject{
 			randomlySelectedSelections.add(availableSelections.get(randomIndex));
 			availableSelections.remove(randomIndex);
 		}
-		System.out.println(availableSelections);
 		return randomlySelectedSelections;
 	}
 	
