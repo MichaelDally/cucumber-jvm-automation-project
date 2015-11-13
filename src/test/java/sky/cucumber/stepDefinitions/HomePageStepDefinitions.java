@@ -1,10 +1,11 @@
 package sky.cucumber.stepDefinitions;
 
-
 import static org.junit.Assert.*;
 
+import org.junit.AfterClass;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.UnreachableBrowserException;
 import org.openqa.selenium.support.PageFactory;
 
 import sky.browser.AbstractBrowser;
@@ -17,7 +18,7 @@ import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
-public class HomePageStepDefinitions extends AbstractBrowser{
+public class HomePageStepDefinitions extends AbstractBrowser {
 
 	private HomePage homePage;
 	private BetSlip betSlip;
@@ -33,7 +34,7 @@ public class HomePageStepDefinitions extends AbstractBrowser{
 	@Given("^I have arrived on the website$")
 	public void i_have_arrived_on_the_website() throws Throwable {
 		driver.navigate().to(System.getProperty("url"));
-		
+
 	}
 
 	@When("^I place \"([^\"]*)\" bets$")
@@ -49,8 +50,12 @@ public class HomePageStepDefinitions extends AbstractBrowser{
 
 	@After
 	public void close() {
-		driver.close();		
-	}
+		try{
+		driver.close();
+		}
+		catch(UnreachableBrowserException ube){
+			driver = getDriver(System.getProperty("browser"));
+					}
+		}
 	
-
 }

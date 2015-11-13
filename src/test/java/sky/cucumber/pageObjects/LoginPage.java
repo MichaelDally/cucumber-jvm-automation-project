@@ -1,50 +1,38 @@
 package sky.cucumber.pageObjects;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import sky.abstractPageObject.AbstractPageObject;
-import sky.browser.AbstractBrowser;
+import sky.synchroniser.Synchroniser;
 
 public class LoginPage extends AbstractPageObject{	
-	private By BETTING_CELL_LOCATOR = By.cssSelector(".odds-cell");
-	private By EXPAND_ALL_LINK = By.cssSelector("#live-bet-bar .collapsed");
 	WebDriver driver;
+	Synchroniser synchroniser = new Synchroniser();
+
+	private By LOGIN_LINK_LOCATOR = By.cssSelector(".js-account-bar__login");
+	private By LOGIN_FORM_DIV_LOCATOR = By.cssSelector("#SkyBetAccount");
 
 	public LoginPage(WebDriver driver){
 		this.driver = super.getDriver();
-	}
-	private List<WebElement> getBettingCells(){
-		return driver.findElements(BETTING_CELL_LOCATOR);
-	}
-	
-	private WebElement getExpandAllLink(){
-		return driver.findElement(EXPAND_ALL_LINK);
-	}
-	
-	private List<WebElement> getRandomSelections(int numberOfSelectionsToClickOn){
-		List<WebElement> randomlySelectedSelections = new ArrayList<WebElement>();
-		List<WebElement> availableSelections = getBettingCells();
-		int randomIndex = new Random().nextInt(getBettingCells().size());
-		for(int index = 0; index < numberOfSelectionsToClickOn; index++){
-			randomlySelectedSelections.add(availableSelections.get(randomIndex));
-			availableSelections.remove(randomIndex);
 		}
-		return randomlySelectedSelections;
-	}
 	
-	public void clickRandomSelections(int numberOfSelectionsToClickOn){
-		for (WebElement selection : getRandomSelections(numberOfSelectionsToClickOn)){
-			selection.click();
-		}
+	private WebElement getLoginLinkLocator(){
+		return driver.findElement(LOGIN_LINK_LOCATOR);
+	}
+	private WebElement getLoginForm(){
+		return driver.findElement(LOGIN_FORM_DIV_LOCATOR);
 	}
 
-	public void clickExpandAll() {
-		getExpandAllLink().click();		
+	public void clickLoginLinkLocator(){
+		getLoginLinkLocator().click();
 	}
+
+	public boolean isLoginFormPresent() {
+		WebElement frame = driver.findElement(By.cssSelector("#SkyBetAccount"));
+		driver.switchTo().frame(frame);
+		return driver.findElement(By.id("username")).isDisplayed();	
+	}
+
 }

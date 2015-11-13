@@ -28,6 +28,7 @@ public class AbstractBrowser implements BrowserInterface {
 			}
 			driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 			driver.manage().window().maximize();
+			driver.manage().deleteAllCookies();
 			return driver;
 		} else {
 			return driver;

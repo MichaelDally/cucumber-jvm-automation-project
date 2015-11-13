@@ -20,7 +20,7 @@
             $(document).ready(function () {
                 jQuery('#stacked-graph').tufteBar({
                     data:[
-                        [[3,0,0,0],{label:'@wip'}],
+                        [[4,1,1,0],{label:'@wip'}],
                     ],
                     color:function (index, stackedIndex) {
                         return ['#00CE00', '#CC1134', '#88aaff', '#FBB917', '#FBB957', '#FBB9A7'][stackedIndex]
@@ -358,18 +358,18 @@ table.data-table td {
                             <a href="wip.html">@wip</a>
 
                                                     </td>
+                        <td>2</td>
                         <td>1</td>
                         <td>1</td>
-                        <td>0</td>
-                        <td>3</td>
-                        <td>3</td>
+                        <td>6</td>
+                        <td>4</td>
+                        <td   style="background-color:#FF0000;" >1</td>
+                        <td    style="background-color:#88AAFF;" >1</td>
                         <td >0</td>
                         <td >0</td>
                         <td >0</td>
-                        <td >0</td>
-                        <td >0</td>
-                        <td style="text-align:right;white-space:nowrap">08s 986ms</td>
-                        <td style="background-color: #00CE00;">passed</td>
+                        <td style="text-align:right;white-space:nowrap">24s 565ms</td>
+                        <td style="background-color: #FF0000;">failed</td>
                     </tr>
                 
                 <!--  add row to adjust num of steps -->
@@ -391,17 +391,17 @@ table.data-table td {
                 <!--  Summarize all steps and time executions -->
                                 <tr>
                     <th style="background-color:lightgray;">1</th>
+                    <th style="background-color:lightgray;">2</th>
+                    <th style="background-color:lightgray;">1</th>
+                    <th style="background-color:lightgray;">1</th>
+                    <th style="background-color:lightgray;">6</th>
+                    <th style="background-color:lightgray;">4</th>
                     <th style="background-color:lightgray;">1</th>
                     <th style="background-color:lightgray;">1</th>
                     <th style="background-color:lightgray;">0</th>
-                    <th style="background-color:lightgray;">3</th>
-                    <th style="background-color:lightgray;">3</th>
                     <th style="background-color:lightgray;">0</th>
                     <th style="background-color:lightgray;">0</th>
-                    <th style="background-color:lightgray;">0</th>
-                    <th style="background-color:lightgray;">0</th>
-                    <th style="background-color:lightgray;">0</th>
-                    <th style="background-color:lightgray;text-align:right;white-space:nowrap">08s 986ms</th>
+                    <th style="background-color:lightgray;text-align:right;white-space:nowrap">24s 565ms</th>
                     <th style="background-color:lightgray;">Totals</th>
                 </tr>
             </table>
@@ -414,7 +414,7 @@ table.data-table td {
 <div class="container_12">
     <div class="grid_12 hr"></div>
     <div class="grid_12 footer">
-        <p style="text-align:center;"><a href="https://github.com/damianszczepanik/jenkins-cucumber-jvm-reports-plugin-java">Cucumber-JVM Jenkins Report Plugin</a> - version: cucumber-reporting-0.2.1 - 13-11-2015 09:48:41</p>
+        <p style="text-align:center;"><a href="https://github.com/damianszczepanik/jenkins-cucumber-jvm-reports-plugin-java">Cucumber-JVM Jenkins Report Plugin</a> - version: cucumber-reporting-0.2.1 - 13-11-2015 17:16:23</p>
     </div>
 </div>
 <div class="clear"></div>
