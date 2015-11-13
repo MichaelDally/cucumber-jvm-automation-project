@@ -10,6 +10,7 @@ import org.openqa.selenium.support.PageFactory;
 import sky.browser.AbstractBrowser;
 import sky.cucumber.pageObjects.BetSlip;
 import sky.cucumber.pageObjects.HomePage;
+import sky.synchroniser.Synchroniser;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;

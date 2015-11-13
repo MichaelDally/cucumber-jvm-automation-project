@@ -1,11 +1,12 @@
+sky\synchroniser\Synchroniser$1.class
 sky\synchroniser\Synchroniser.class
 sky\cucumber\pageObjects\LoginPage.class
 sky\cucumber\pageObjects\HomePage.class
 sky\cucumber\stepDefinitions\LoginPageStepDefs.class
 sky\cucumber\pageObjects\BetSlip.class
 sky\abstractPageObject\AbstractPageObject.class
-sky\browser\BrowserInterface.class
 sky\actions\Actions.class
+sky\interfaces\BrowserInterface.class
 sky\cucumber\automation\RunTest.class
 sky\browser\AbstractBrowser.class
 sky\cucumber\stepDefinitions\HomePageStepDefinitions.class

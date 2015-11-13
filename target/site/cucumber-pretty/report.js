@@ -7,11 +7,11 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 5551350751,
+  "duration": 4687191447,
   "status": "passed"
 });
 formatter.before({
-  "duration": 3239601,
+  "duration": 634484,
   "status": "passed"
 });
 formatter.scenario({
@@ -47,7 +47,7 @@ formatter.match({
   "location": "HomePageStepDefinitions.i_have_arrived_on_the_website()"
 });
 formatter.result({
-  "duration": 8657176154,
+  "duration": 7410440248,
   "status": "passed"
 });
 formatter.match({
@@ -60,18 +60,18 @@ formatter.match({
   "location": "HomePageStepDefinitions.i_place_bets(int)"
 });
 formatter.result({
-  "duration": 1311692141,
+  "duration": 1479431054,
   "status": "passed"
 });
 formatter.match({
   "location": "HomePageStepDefinitions.the_betslip_should_appear()"
 });
 formatter.result({
-  "duration": 287111017,
+  "duration": 96736419,
   "status": "passed"
 });
 formatter.after({
-  "duration": 15387171,
+  "duration": 41457465,
   "status": "passed"
 });
 });

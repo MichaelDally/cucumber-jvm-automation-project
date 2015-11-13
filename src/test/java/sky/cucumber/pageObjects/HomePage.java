@@ -45,7 +45,7 @@ public class HomePage extends AbstractPageObject{
 	
 	public void clickRandomSelections(int numberOfSelectionsToClickOn){
 		for (WebElement selection : getRandomSelections(numberOfSelectionsToClickOn)){
-			synchroniser.waitUntilElementVisable(selection,10);
+			synchroniser.waitUntilElementDisplayed(selection,10);
 			actions.moveToElement(selection);
 			selection.click();
 		}
@@ -58,7 +58,7 @@ public class HomePage extends AbstractPageObject{
 	}
 	
 	public boolean isExpandAllLinkPresent(){
-		return synchroniser.waitUntilElementVisable(getExpandAllLink(), 10);
+		return synchroniser.waitUntilElementDisplayed(getExpandAllLink(), 10);
 	}
 	
 	

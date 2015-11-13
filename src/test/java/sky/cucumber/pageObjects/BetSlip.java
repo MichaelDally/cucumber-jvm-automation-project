@@ -22,6 +22,6 @@ public class BetSlip extends AbstractPageObject{
 	}
 	
 	public boolean isBetSlipVisible(){
-		return synchroniser.waitUntilElementVisable(getBetSlipContentLocator(), 10);
+		return synchroniser.waitUntilElementDisplayed(getBetSlipContentLocator(), 10);
 	}
 }

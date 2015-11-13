@@ -6,20 +6,20 @@
         "before": [
           {
             "result": {
-              "duration": 5551350751,
-              "status": "passed"
-            },
-            "match": {
-              "location": "LoginPageStepDefs.setUp()"
-            }
-          },
-          {
-            "result": {
-              "duration": 3239601,
+              "duration": 4687191447,
               "status": "passed"
             },
             "match": {
               "location": "HomePageStepDefinitions.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 634484,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginPageStepDefs.setUp()"
             }
           }
         ],
@@ -30,7 +30,7 @@
         "after": [
           {
             "result": {
-              "duration": 15387171,
+              "duration": 41457465,
               "status": "passed"
             },
             "match": {
@@ -43,7 +43,7 @@
         "steps": [
           {
             "result": {
-              "duration": 8657176154,
+              "duration": 7410440248,
               "status": "passed"
             },
             "line": 8,
@@ -55,7 +55,7 @@
           },
           {
             "result": {
-              "duration": 1311692141,
+              "duration": 1479431054,
               "status": "passed"
             },
             "line": 9,
@@ -73,7 +73,7 @@
           },
           {
             "result": {
-              "duration": 287111017,
+              "duration": 96736419,
               "status": "passed"
             },
             "line": 10,
