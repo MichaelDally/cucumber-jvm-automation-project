@@ -6,5 +6,5 @@ I want to be able to add bets to my betslip
 @wip
 Scenario: Place multiple bets
   Given I have arrived on the website
-  When I place "3" bets
+  When I place "4" bets
   Then the betslip should appear

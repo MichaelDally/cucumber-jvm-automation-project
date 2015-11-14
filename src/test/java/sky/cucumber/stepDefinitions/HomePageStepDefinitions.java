@@ -45,9 +45,9 @@ public class HomePageStepDefinitions extends AbstractBrowser {
 	public void the_betslip_should_appear() {
 		assertTrue(betSlip.isBetSlipVisible());
 	}
-
+/*
 	@After("@close")
 	public void close() {
 		driver.close();
-	}
+	}*/
 }

@@ -34,10 +34,10 @@ public class LoginPageStepDefs extends AbstractBrowser {
 		Assert.assertTrue("Login form not loaded",
 				loginPage.isLoginFormPresent());
 	}
-
+/*
 	@After("@close")
 	public void close() {
 		driver.close();
 	}
-
+*/
 }
