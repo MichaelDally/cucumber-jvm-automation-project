@@ -8,7 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import sky.browser.AbstractBrowser;
 import sky.cucumber.pageObjects.LoginPage;
-import org.junit.After;
+import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -35,12 +35,9 @@ public class LoginPageStepDefs extends AbstractBrowser {
 				loginPage.isLoginFormPresent());
 	}
 
-	@After
+	@After("@close")
 	public void close() {
-		try {
-			driver.close();
-		} catch (UnreachableBrowserException ube) {
-			driver = getDriver(System.getProperty("browser"));
-		}
+		driver.close();
 	}
+
 }

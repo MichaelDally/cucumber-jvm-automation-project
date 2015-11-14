@@ -23,8 +23,6 @@ public class HomePageStepDefinitions extends AbstractBrowser {
 	private HomePage homePage;
 	private BetSlip betSlip;
 	private WebDriver driver = getDriver(System.getProperty("browser"));
-	Actions actions;
-
 	@Before
 	public void setUp() {
 		homePage = PageFactory.initElements(driver, HomePage.class);
@@ -48,14 +46,8 @@ public class HomePageStepDefinitions extends AbstractBrowser {
 		assertTrue(betSlip.isBetSlipVisible());
 	}
 
-	@After
+	@After("@close")
 	public void close() {
-		try{
 		driver.close();
-		}
-		catch(UnreachableBrowserException ube){
-			driver = getDriver(System.getProperty("browser"));
-					}
-		}
-	
+	}
 }

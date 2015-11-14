@@ -293,17 +293,17 @@ table.data-table td {
                     <tr>
                         <td><a id="stats-User places bets" href="skyNavigation.feature.html">User places bets</a></td>
                                                 <td id="stats-number-scenarios-User places bets">1</td>
-                        <td id="stats-number-scenarios-passed-User places bets">0</td>
-                        <td id="stats-number-scenarios-failed-User places bets">1</td>
+                        <td id="stats-number-scenarios-passed-User places bets">1</td>
+                        <td id="stats-number-scenarios-failed-User places bets">0</td>
                         <td id="stats-number-steps-User places bets">3</td>
-                        <td id="stats-number-steps-passed-User places bets">1</td>
-                        <td id="stats-number-steps-failed-User places bets"      style="background-color:#FF0000;" >1</td>
-                        <td id="stats-number-steps-skipped-User places bets"      style="background-color:#88AAFF;" >1</td>
+                        <td id="stats-number-steps-passed-User places bets">3</td>
+                        <td id="stats-number-steps-failed-User places bets"    >0</td>
+                        <td id="stats-number-steps-skipped-User places bets"   >0</td>
                         <td id="stats-number-steps-pending-User places bets"   >0</td>
                         <td id="stats-number-steps-undefined-User places bets" >0</td>
                         <td id="stats-number-steps-missing-User places bets"   >0</td>
-                        <td id="stats-duration-User places bets" style="text-align:right;white-space:nowrap">16s 071ms</td>
-                        <td id="stats-status-User places bets" style="background-color: #FF0000;">failed</td></tr>
+                        <td id="stats-duration-User places bets" style="text-align:right;white-space:nowrap">10s 614ms</td>
+                        <td id="stats-status-User places bets" style="background-color: #00CE00;">passed</td></tr>
 
                 </table>
 
@@ -312,31 +312,18 @@ table.data-table td {
         <div style="color:black;">
 
             <div class="feature-tags"></div>
-            <div class="failed"><div class="feature-line"><span class="feature-keyword">Feature:</span> User places bets</div></div>
+            <div class="passed"><div class="feature-line"><span class="feature-keyword">Feature:</span> User places bets</div></div>
             <div class="feature-description">In order to place bets<br/>As a customer<br/><span class="feature-action">I want to</span> be able to add bets to my betslip</div>
 
                             <div class="feature-tags"><a href="wip.html">@wip</a></div>
-                <div class="failed"><span class="scenario-keyword">Scenario: </span> <span class="scenario-name">Place multiple bets</span></div>
-                                  <div class="passed"><span class="step-keyword">Given  </span><span class="step-name">I have arrived on the website</span><span class="step-duration">05s 748ms</span></div>
+                <div class="passed"><span class="scenario-keyword">Scenario: </span> <span class="scenario-name">Place multiple bets</span></div>
+                                  <div class="passed"><span class="step-keyword">Given  </span><span class="step-name">I have arrived on the website</span><span class="step-duration">08s 730ms</span></div>
                     
                                       <div class="output-data"></div>
-                                  <div class="failed"><span class="step-keyword">When  </span><span class="step-name">I place &quot;3&quot; bets</span><span class="step-duration">10s 322ms</span><div class="step-error-message"><pre class="step-error-message-content">org.openqa.selenium.TimeoutException: Timed out after 10 seconds waiting for visibility of [[FirefoxDriver: firefox on WINDOWS (28d94e67-7f96-4c18-ab1d-18fa469440fd)] -> css selector: #live-bet-bar .collapsed]
-Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
-System info: host: 'W8150602', ip: '172.18.101.96', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_45'
-Driver info: org.openqa.selenium.firefox.FirefoxDriver
-Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=42.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 28d94e67-7f96-4c18-ab1d-18fa469440fd
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-	at sky.synchroniser.Synchroniser.waitUntilElementDisplayed(Synchroniser.java:29)
-	at sky.cucumber.pageObjects.HomePage.isExpandAllLinkPresent(HomePage.java:61)
-	at sky.cucumber.pageObjects.HomePage.clickExpandAllLinkIfPresent(HomePage.java:55)
-	at sky.cucumber.stepDefinitions.HomePageStepDefinitions.i_place_bets(HomePageStepDefinitions.java:42)
-	at âœ½.When I place "3" bets(skyNavigation.feature:9)
-</pre></div></div>
+                                  <div class="passed"><span class="step-keyword">When  </span><span class="step-name">I place &quot;3&quot; bets</span><span class="step-duration">01s 665ms</span></div>
                     
                                       <div class="output-data"></div>
-                                  <div class="skipped"><span class="step-keyword">Then  </span><span class="step-name">the betslip should appear</span><span class="step-duration">000ms</span></div>
+                                  <div class="passed"><span class="step-keyword">Then  </span><span class="step-name">the betslip should appear</span><span class="step-duration">219ms</span></div>
                     
                                       <div class="output-data"></div>
                             
@@ -347,7 +334,7 @@ Session ID: 28d94e67-7f96-4c18-ab1d-18fa469440fd
 <div class="container_12">
     <div class="grid_12 hr"></div>
     <div class="grid_12 footer">
-        <p style="text-align:center;"><a href="https://github.com/damianszczepanik/jenkins-cucumber-jvm-reports-plugin-java">Cucumber-JVM Jenkins Report Plugin</a> - version: cucumber-reporting-0.2.1 - 13-11-2015 17:16:23</p>
+        <p style="text-align:center;"><a href="https://github.com/damianszczepanik/jenkins-cucumber-jvm-reports-plugin-java">Cucumber-JVM Jenkins Report Plugin</a> - version: cucumber-reporting-0.2.1 - 14-11-2015 09:27:13</p>
     </div>
 </div>
 <div class="clear"></div>

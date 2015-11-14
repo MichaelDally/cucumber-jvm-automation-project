@@ -14,6 +14,7 @@ public class AbstractBrowser implements BrowserInterface {
 	protected static WebDriver driver;
 
 	public static WebDriver getDriver(String browserType) {
+		try{
 		if (driver == null) {
 			if (browserType.equalsIgnoreCase("Firefox")) {
 				ProfilesIni profile = new ProfilesIni();
@@ -32,7 +33,10 @@ public class AbstractBrowser implements BrowserInterface {
 			return driver;
 		} else {
 			return driver;
-		}
+		}} finally{
+        	Runtime.getRuntime().addShutdownHook(
+				new Thread(new BrowserCleanup()));
+        }		
 	}
 
 	public void getUrl(String url) {
@@ -41,5 +45,11 @@ public class AbstractBrowser implements BrowserInterface {
 
 	public void close() {
 		driver.close();
+	}
+	
+	private static class BrowserCleanup implements Runnable {
+		public void run() {
+			driver.close();
+		}
 	}
 }

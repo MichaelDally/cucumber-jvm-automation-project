@@ -13,11 +13,11 @@ formatter.feature({
   ]
 });
 formatter.before({
-  "duration": 4616956865,
+  "duration": 5161753770,
   "status": "passed"
 });
 formatter.before({
-  "duration": 457668,
+  "duration": 540245,
   "status": "passed"
 });
 formatter.scenario({
@@ -47,21 +47,21 @@ formatter.match({
   "location": "HomePageStepDefinitions.i_have_arrived_on_the_website()"
 });
 formatter.result({
-  "duration": 6345932817,
+  "duration": 8536057353,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginPageStepDefs.i_select_login()"
 });
 formatter.result({
-  "duration": 191108919,
+  "duration": 235540062,
   "status": "passed"
 });
 formatter.match({
   "location": "LoginPageStepDefs.i_should_see_the_login_options()"
 });
 formatter.result({
-  "duration": 1956861151,
+  "duration": 2778439580,
   "status": "passed"
 });
 formatter.uri("skyNavigation.feature");
@@ -73,11 +73,11 @@ formatter.feature({
   "keyword": "Feature"
 });
 formatter.before({
-  "duration": 68113,
+  "duration": 178682,
   "status": "passed"
 });
 formatter.before({
-  "duration": 37789,
+  "duration": 83509,
   "status": "passed"
 });
 formatter.scenario({
@@ -113,7 +113,7 @@ formatter.match({
   "location": "HomePageStepDefinitions.i_have_arrived_on_the_website()"
 });
 formatter.result({
-  "duration": 5748803111,
+  "duration": 8730032181,
   "status": "passed"
 });
 formatter.match({
@@ -126,14 +126,14 @@ formatter.match({
   "location": "HomePageStepDefinitions.i_place_bets(int)"
 });
 formatter.result({
-  "duration": 10322873055,
-  "error_message": "org.openqa.selenium.TimeoutException: Timed out after 10 seconds waiting for visibility of [[FirefoxDriver: firefox on WINDOWS (28d94e67-7f96-4c18-ab1d-18fa469440fd)] -\u003e css selector: #live-bet-bar .collapsed]\nBuild info: version: \u00272.48.2\u0027, revision: \u002741bccdd10cf2c0560f637404c2d96164b67d9d67\u0027, time: \u00272015-10-09 13:08:06\u0027\nSystem info: host: \u0027W8150602\u0027, ip: \u0027172.18.101.96\u0027, os.name: \u0027Windows 8.1\u0027, os.arch: \u0027x86\u0027, os.version: \u00276.3\u0027, java.version: \u00271.8.0_45\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities [{applicationCacheEnabled\u003dtrue, rotatable\u003dfalse, handlesAlerts\u003dtrue, databaseEnabled\u003dtrue, version\u003d42.0, platform\u003dWINDOWS, nativeEvents\u003dfalse, acceptSslCerts\u003dtrue, webStorageEnabled\u003dtrue, locationContextEnabled\u003dtrue, browserName\u003dfirefox, takesScreenshot\u003dtrue, javascriptEnabled\u003dtrue, cssSelectorsEnabled\u003dtrue}]\nSession ID: 28d94e67-7f96-4c18-ab1d-18fa469440fd\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)\r\n\tat sky.synchroniser.Synchroniser.waitUntilElementDisplayed(Synchroniser.java:29)\r\n\tat sky.cucumber.pageObjects.HomePage.isExpandAllLinkPresent(HomePage.java:61)\r\n\tat sky.cucumber.pageObjects.HomePage.clickExpandAllLinkIfPresent(HomePage.java:55)\r\n\tat sky.cucumber.stepDefinitions.HomePageStepDefinitions.i_place_bets(HomePageStepDefinitions.java:42)\r\n\tat ✽.When I place \"3\" bets(skyNavigation.feature:9)\r\n",
-  "status": "failed"
+  "duration": 1665076879,
+  "status": "passed"
 });
 formatter.match({
   "location": "HomePageStepDefinitions.the_betslip_should_appear()"
 });
 formatter.result({
-  "status": "skipped"
+  "duration": 219461024,
+  "status": "passed"
 });
 });
