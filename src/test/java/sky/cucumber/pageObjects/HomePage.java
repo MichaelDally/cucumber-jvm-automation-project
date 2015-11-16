@@ -60,7 +60,4 @@ public class HomePage extends AbstractPageObject{
 	public boolean isExpandAllLinkPresent(){
 		return synchroniser.waitUntilElementDisplayed(getExpandAllLink(), 10);
 	}
-	
-	
 }
-;

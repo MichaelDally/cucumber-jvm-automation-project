@@ -1,94 +1,12 @@
 [
   {
-    "line": 2,
-    "elements": [
-      {
-        "before": [
-          {
-            "result": {
-              "duration": 5161753770,
-              "status": "passed"
-            },
-            "match": {
-              "location": "HomePageStepDefinitions.setUp()"
-            }
-          },
-          {
-            "result": {
-              "duration": 540245,
-              "status": "passed"
-            },
-            "match": {
-              "location": "LoginPageStepDefs.setUp()"
-            }
-          }
-        ],
-        "line": 8,
-        "name": "Display login options",
-        "description": "",
-        "id": "user-logs-in;display-login-options",
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 8536057353,
-              "status": "passed"
-            },
-            "line": 9,
-            "name": "I have arrived on the website",
-            "match": {
-              "location": "HomePageStepDefinitions.i_have_arrived_on_the_website()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 235540062,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "I select login",
-            "match": {
-              "location": "LoginPageStepDefs.i_select_login()"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 2778439580,
-              "status": "passed"
-            },
-            "line": 11,
-            "name": "I should see the login options",
-            "match": {
-              "location": "LoginPageStepDefs.i_should_see_the_login_options()"
-            },
-            "keyword": "Then "
-          }
-        ]
-      }
-    ],
-    "name": "User logs in",
-    "description": "In order to allow users access to their own account\r\nAs a business\r\nI want to provide login functionality to the customer",
-    "id": "user-logs-in",
-    "keyword": "Feature",
-    "uri": "skyLogin.feature",
-    "tags": [
-      {
-        "line": 1,
-        "name": "@wip"
-      }
-    ]
-  },
-  {
     "line": 1,
     "elements": [
       {
         "before": [
           {
             "result": {
-              "duration": 178682,
+              "duration": 4505596056,
               "status": "passed"
             },
             "match": {
@@ -97,7 +15,7 @@
           },
           {
             "result": {
-              "duration": 83509,
+              "duration": 549575,
               "status": "passed"
             },
             "match": {
@@ -114,7 +32,7 @@
         "steps": [
           {
             "result": {
-              "duration": 8730032181,
+              "duration": 6466659264,
               "status": "passed"
             },
             "line": 8,
@@ -126,15 +44,16 @@
           },
           {
             "result": {
-              "duration": 1665076879,
-              "status": "passed"
+              "duration": 10357065213,
+              "error_message": "org.openqa.selenium.TimeoutException: Timed out after 10 seconds waiting for visibility of [[FirefoxDriver: firefox on WINDOWS (3b32a83c-4bdf-4d18-bb42-7c2d390efdfb)] -\u003e css selector: #live-bet-bar .collapsed]\nBuild info: version: \u00272.48.2\u0027, revision: \u002741bccdd10cf2c0560f637404c2d96164b67d9d67\u0027, time: \u00272015-10-09 13:08:06\u0027\nSystem info: host: \u0027W8150602\u0027, ip: \u0027172.18.101.96\u0027, os.name: \u0027Windows 8.1\u0027, os.arch: \u0027x86\u0027, os.version: \u00276.3\u0027, java.version: \u00271.8.0_45\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities [{applicationCacheEnabled\u003dtrue, rotatable\u003dfalse, handlesAlerts\u003dtrue, databaseEnabled\u003dtrue, version\u003d42.0, platform\u003dWINDOWS, nativeEvents\u003dfalse, acceptSslCerts\u003dtrue, webStorageEnabled\u003dtrue, locationContextEnabled\u003dtrue, browserName\u003dfirefox, takesScreenshot\u003dtrue, javascriptEnabled\u003dtrue, cssSelectorsEnabled\u003dtrue}]\nSession ID: 3b32a83c-4bdf-4d18-bb42-7c2d390efdfb\r\n\tat org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)\r\n\tat org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)\r\n\tat sky.synchroniser.Synchroniser.waitUntilElementDisplayed(Synchroniser.java:29)\r\n\tat sky.cucumber.pageObjects.HomePage.isExpandAllLinkPresent(HomePage.java:61)\r\n\tat sky.cucumber.pageObjects.HomePage.clickExpandAllLinkIfPresent(HomePage.java:55)\r\n\tat sky.cucumber.stepDefinitions.HomePageStepDefinitions.i_place_bets(HomePageStepDefinitions.java:35)\r\n\tat ✽.When I place \"4\" bets(SkyBetPlacement.feature:9)\r\n",
+              "status": "failed"
             },
             "line": 9,
-            "name": "I place \"3\" bets",
+            "name": "I place \"4\" bets",
             "match": {
               "arguments": [
                 {
-                  "val": "3",
+                  "val": "4",
                   "offset": 9
                 }
               ],
@@ -144,8 +63,7 @@
           },
           {
             "result": {
-              "duration": 219461024,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 10,
             "name": "the betslip should appear",
@@ -167,6 +85,88 @@
     "description": "In order to place bets\r\nAs a customer\r\nI want to be able to add bets to my betslip",
     "id": "user-places-bets",
     "keyword": "Feature",
-    "uri": "skyNavigation.feature"
+    "uri": "SkyBetPlacement.feature"
+  },
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 348033,
+              "status": "passed"
+            },
+            "match": {
+              "location": "HomePageStepDefinitions.setUp()"
+            }
+          },
+          {
+            "result": {
+              "duration": 338702,
+              "status": "passed"
+            },
+            "match": {
+              "location": "LoginPageStepDefs.setUp()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "Display login options",
+        "description": "",
+        "id": "user-logs-in;display-login-options",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5781974495,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I have arrived on the website",
+            "match": {
+              "location": "HomePageStepDefinitions.i_have_arrived_on_the_website()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 180515835,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "I select login",
+            "match": {
+              "location": "LoginPageStepDefs.i_select_login()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1971350247,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "I should see the login options",
+            "match": {
+              "location": "LoginPageStepDefs.i_should_see_the_login_options()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "User logs in",
+    "description": "In order to allow users access to their own account\r\nAs a business\r\nI want to provide login functionality to the customer",
+    "id": "user-logs-in",
+    "keyword": "Feature",
+    "uri": "SkyLogin.feature",
+    "tags": [
+      {
+        "line": 1,
+        "name": "@wip"
+      }
+    ]
   }
 ]

@@ -1,18 +1,13 @@
 package sky.cucumber.stepDefinitions;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
-import org.junit.AfterClass;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.remote.UnreachableBrowserException;
 import org.openqa.selenium.support.PageFactory;
 
 import sky.browser.AbstractBrowser;
 import sky.cucumber.pageObjects.BetSlip;
 import sky.cucumber.pageObjects.HomePage;
-import sky.synchroniser.Synchroniser;
-import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -45,9 +40,4 @@ public class HomePageStepDefinitions extends AbstractBrowser {
 	public void the_betslip_should_appear() {
 		assertTrue(betSlip.isBetSlipVisible());
 	}
-/*
-	@After("@close")
-	public void close() {
-		driver.close();
-	}*/
 }
