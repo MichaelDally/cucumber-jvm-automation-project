@@ -5,9 +5,8 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxProfile;
-import org.openqa.selenium.firefox.internal.ProfilesIni;
 import org.openqa.selenium.remote.SessionNotFoundException;
+import org.openqa.selenium.remote.UnreachableBrowserException;
 
 public class AbstractBrowser {
 	protected static WebDriver driver;
@@ -56,7 +55,13 @@ public class AbstractBrowser {
 
 	private static class BrowserCleanup implements Runnable {
 		public void run() {
+			try{
 			driver.close();
+			}catch(SessionNotFoundException snfe){
+				//do nothing
+			}catch(UnreachableBrowserException ube){
+				//do nothing
+			}
 		}
 	}
 }

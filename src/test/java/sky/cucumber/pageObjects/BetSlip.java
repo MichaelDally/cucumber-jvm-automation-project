@@ -12,7 +12,7 @@ public class BetSlip extends AbstractPageObject{
 	Synchroniser synchroniser = new Synchroniser();
 	
 	public BetSlip(WebDriver driver){
-		this.driver = getDriver();
+		driver = super.getDriver();
 	}
 	
 	private By BET_SLIP_CONTENT = By.cssSelector(".bet-slip-content .pane");

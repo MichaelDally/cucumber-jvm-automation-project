@@ -24,6 +24,7 @@ public class LoginPage extends AbstractPageObject{
 
 	public void clickLoginLinkLocator(){
 		getLoginLinkLocator().click();
+		synchroniser.waitUntilAjaxRequestCompleted(10);
 	}
 
 	public boolean isLoginFormPresent() {
