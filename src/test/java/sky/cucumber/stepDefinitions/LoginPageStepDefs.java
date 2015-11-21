@@ -17,6 +17,7 @@ public class LoginPageStepDefs extends AbstractBrowser {
 	private Synchroniser synchroniser = new Synchroniser();
 	private WebDriver driver = getDriver(System.getProperty("browser"));
 
+
 	@Before
 	public void setUp() {
 		loginPage = PageFactory.initElements(driver, LoginPage.class);
