@@ -6,7 +6,7 @@ import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features = { "src/test/resources/features" }, tags = { "@wip" }, glue = { "sky.cucumber.stepDefinitions" }, plugin = {"pretty",
+@CucumberOptions(features = { "src/test/resources/features" }, tags = { "@complete" }, glue = { "sky.cucumber.stepDefinitions" }, plugin = {"pretty",
         "html:target/site/cucumber-pretty",
         "json:target/cucumber.json"  }, monochrome = true)
 public class RunTest {

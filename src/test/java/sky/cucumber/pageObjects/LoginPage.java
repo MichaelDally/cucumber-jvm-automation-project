@@ -21,9 +21,6 @@ public class LoginPage extends AbstractPageObject{
 	private WebElement getLoginLinkLocator(){
 		return driver.findElement(LOGIN_LINK_LOCATOR);
 	}
-	private WebElement getLoginForm(){
-		return driver.findElement(LOGIN_FORM_DIV_LOCATOR);
-	}
 
 	public void clickLoginLinkLocator(){
 		getLoginLinkLocator().click();

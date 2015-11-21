@@ -1,4 +1,4 @@
-@wip
+@complete
 Feature: User logs in
 In order to allow users access to their own account
 As a business

@@ -7,6 +7,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.internal.ProfilesIni;
+import org.openqa.selenium.remote.SessionNotFoundException;
+import org.openqa.selenium.remote.UnreachableBrowserException;
 
 import sky.interfaces.BrowserInterface;
 
@@ -38,10 +40,12 @@ public class AbstractBrowser implements BrowserInterface {
 				return driver;
 			}
 		} finally {
-			// When all tests are complete, create a new process and close open
-			// browsers
+			if(driver != null){
 			Runtime.getRuntime().addShutdownHook(
 					new Thread(new BrowserCleanup()));
+			}else if(driver == null){
+				System.out.println("Tests completed");
+			}
 		}
 	}
 
@@ -55,7 +59,13 @@ public class AbstractBrowser implements BrowserInterface {
 
 	private static class BrowserCleanup implements Runnable {
 		public void run() {
+			try{
 			driver.close();
+			}catch(SessionNotFoundException snfe){
+				//do nothing
+			}catch(UnreachableBrowserException ube){
+				//do nothing
+			}
 		}
 	}
 }

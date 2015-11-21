@@ -1,11 +1,11 @@
-c:\Users\Michael Dally\workspace\sky.cucumber.automation\src\test\java\sky\cucumber\stepDefinitions\HomePageStepDefinitions.java
-c:\Users\Michael Dally\workspace\sky.cucumber.automation\src\test\java\sky\cucumber\stepDefinitions\LoginPageStepDefs.java
-c:\Users\Michael Dally\workspace\sky.cucumber.automation\src\test\java\sky\actions\Actions.java
-c:\Users\Michael Dally\workspace\sky.cucumber.automation\src\test\java\sky\browser\AbstractBrowser.java
-c:\Users\Michael Dally\workspace\sky.cucumber.automation\src\test\java\sky\cucumber\automation\RunTest.java
-c:\Users\Michael Dally\workspace\sky.cucumber.automation\src\test\java\sky\cucumber\pageObjects\LoginPage.java
-c:\Users\Michael Dally\workspace\sky.cucumber.automation\src\test\java\sky\abstractPageObject\AbstractPageObject.java
-c:\Users\Michael Dally\workspace\sky.cucumber.automation\src\test\java\sky\cucumber\pageObjects\HomePage.java
-c:\Users\Michael Dally\workspace\sky.cucumber.automation\src\test\java\sky\interfaces\BrowserInterface.java
-c:\Users\Michael Dally\workspace\sky.cucumber.automation\src\test\java\sky\synchroniser\Synchroniser.java
-c:\Users\Michael Dally\workspace\sky.cucumber.automation\src\test\java\sky\cucumber\pageObjects\BetSlip.java
+C:\Users\michael.dally\git\skyTemplate\src\test\java\sky\abstractPageObject\AbstractPageObject.java
+C:\Users\michael.dally\git\skyTemplate\src\test\java\sky\browser\AbstractBrowser.java
+C:\Users\michael.dally\git\skyTemplate\src\test\java\sky\cucumber\pageObjects\BetSlip.java
+C:\Users\michael.dally\git\skyTemplate\src\test\java\sky\synchroniser\Synchroniser.java
+C:\Users\michael.dally\git\skyTemplate\src\test\java\sky\actions\Actions.java
+C:\Users\michael.dally\git\skyTemplate\src\test\java\sky\cucumber\stepDefinitions\LoginPageStepDefs.java
+C:\Users\michael.dally\git\skyTemplate\src\test\java\sky\cucumber\automation\RunTest.java
+C:\Users\michael.dally\git\skyTemplate\src\test\java\sky\cucumber\pageObjects\HomePage.java
+C:\Users\michael.dally\git\skyTemplate\src\test\java\sky\cucumber\pageObjects\LoginPage.java
+C:\Users\michael.dally\git\skyTemplate\src\test\java\sky\cucumber\stepDefinitions\HomePageStepDefinitions.java
+C:\Users\michael.dally\git\skyTemplate\src\test\java\sky\interfaces\BrowserInterface.java
