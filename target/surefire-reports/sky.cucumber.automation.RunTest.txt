@@ -1,34 +1,98 @@
 -------------------------------------------------------------------------------
 Test set: sky.cucumber.automation.RunTest
 -------------------------------------------------------------------------------
-Tests run: 8, Failures: 0, Errors: 2, Skipped: 1, Time elapsed: 29.831 sec <<< FAILURE!
-When I place "4" bets(Scenario: Place multiple bets)  Time elapsed: 0.005 sec  <<< ERROR!
-org.openqa.selenium.TimeoutException: Timed out after 10 seconds waiting for visibility of [[FirefoxDriver: firefox on WINDOWS (3b32a83c-4bdf-4d18-bb42-7c2d390efdfb)] -> css selector: #live-bet-bar .collapsed]
+Tests run: 8, Failures: 0, Errors: 4, Skipped: 1, Time elapsed: 570.453 sec <<< FAILURE!
+When I place "4" bets(Scenario: Place multiple bets)  Time elapsed: 0.004 sec  <<< ERROR!
+org.openqa.selenium.TimeoutException: Timed out after 10 seconds waiting for visibility of [[FirefoxDriver: firefox on WINDOWS (d833c060-7fb9-4846-8bc4-232e3a542206)] -> css selector: #live-bet-bar .collapsed b span]
 Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
 System info: host: 'W8150602', ip: '172.18.101.96', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_45'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=42.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3b32a83c-4bdf-4d18-bb42-7c2d390efdfb
+Session ID: d833c060-7fb9-4846-8bc4-232e3a542206
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-	at sky.synchroniser.Synchroniser.waitUntilElementDisplayed(Synchroniser.java:29)
+	at sky.synchroniser.Synchroniser.waitUntilElementDisplayed(Synchroniser.java:30)
 	at sky.cucumber.pageObjects.HomePage.isExpandAllLinkPresent(HomePage.java:61)
 	at sky.cucumber.pageObjects.HomePage.clickExpandAllLinkIfPresent(HomePage.java:55)
-	at sky.cucumber.stepDefinitions.HomePageStepDefinitions.i_place_bets(HomePageStepDefinitions.java:35)
+	at sky.cucumber.stepDefinitions.HomePageStepDefinitions.i_place_bets(HomePageStepDefinitions.java:34)
 	at ?.When I place "4" bets(SkyBetPlacement.feature:9)
 
-Scenario: Place multiple bets  Time elapsed: 0.007 sec  <<< ERROR!
-org.openqa.selenium.TimeoutException: Timed out after 10 seconds waiting for visibility of [[FirefoxDriver: firefox on WINDOWS (3b32a83c-4bdf-4d18-bb42-7c2d390efdfb)] -> css selector: #live-bet-bar .collapsed]
+Scenario: Place multiple bets  Time elapsed: 0.006 sec  <<< ERROR!
+org.openqa.selenium.TimeoutException: Timed out after 10 seconds waiting for visibility of [[FirefoxDriver: firefox on WINDOWS (d833c060-7fb9-4846-8bc4-232e3a542206)] -> css selector: #live-bet-bar .collapsed b span]
 Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
 System info: host: 'W8150602', ip: '172.18.101.96', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_45'
 Driver info: org.openqa.selenium.firefox.FirefoxDriver
 Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=42.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
-Session ID: 3b32a83c-4bdf-4d18-bb42-7c2d390efdfb
+Session ID: d833c060-7fb9-4846-8bc4-232e3a542206
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:229)
-	at sky.synchroniser.Synchroniser.waitUntilElementDisplayed(Synchroniser.java:29)
+	at sky.synchroniser.Synchroniser.waitUntilElementDisplayed(Synchroniser.java:30)
 	at sky.cucumber.pageObjects.HomePage.isExpandAllLinkPresent(HomePage.java:61)
 	at sky.cucumber.pageObjects.HomePage.clickExpandAllLinkIfPresent(HomePage.java:55)
-	at sky.cucumber.stepDefinitions.HomePageStepDefinitions.i_place_bets(HomePageStepDefinitions.java:35)
+	at sky.cucumber.stepDefinitions.HomePageStepDefinitions.i_place_bets(HomePageStepDefinitions.java:34)
 	at ?.When I place "4" bets(SkyBetPlacement.feature:9)
+
+Then I should see the login options(Scenario: Display login options)  Time elapsed: 0.001 sec  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"#SkyBetAccount"}
+Command duration or timeout: 30.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'W8150602', ip: '172.18.101.96', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_45'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=42.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: d833c060-7fb9-4846-8bc4-232e3a542206
+*** Element info: {Using=css selector, value=#SkyBetAccount}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:482)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:345)
+	at sky.cucumber.pageObjects.LoginPage.isLoginFormPresent(LoginPage.java:30)
+	at sky.cucumber.stepDefinitions.LoginPageStepDefs.i_should_see_the_login_options(LoginPageStepDefs.java:33)
+	at ?.Then I should see the login options(SkyLogin.feature:11)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"#SkyBetAccount"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'W8150602', ip: '172.18.101.96', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_45'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/WINDOWS/TEMP/anonymous7546761595933880340webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10659)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/WINDOWS/TEMP/anonymous7546761595933880340webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:621)
+
+Scenario: Display login options  Time elapsed: 0.005 sec  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"#SkyBetAccount"}
+Command duration or timeout: 30.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'W8150602', ip: '172.18.101.96', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_45'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=42.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: d833c060-7fb9-4846-8bc4-232e3a542206
+*** Element info: {Using=css selector, value=#SkyBetAccount}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:482)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:345)
+	at sky.cucumber.pageObjects.LoginPage.isLoginFormPresent(LoginPage.java:30)
+	at sky.cucumber.stepDefinitions.LoginPageStepDefs.i_should_see_the_login_options(LoginPageStepDefs.java:33)
+	at ?.Then I should see the login options(SkyLogin.feature:11)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"#SkyBetAccount"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'W8150602', ip: '172.18.101.96', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_45'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/WINDOWS/TEMP/anonymous7546761595933880340webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10659)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/WINDOWS/TEMP/anonymous7546761595933880340webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:621)
 

@@ -1,5 +1,6 @@
 package sky.synchroniser;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -26,7 +27,7 @@ public class Synchroniser extends AbstractBrowser {
 
 	public boolean waitUntilElementDisplayed(WebElement element, int timeout) {
 		WebDriverWait wait = new WebDriverWait(driver, timeout);
-		return wait.until(ExpectedConditions.visibilityOf(element)) != null;
+		return wait.until(ExpectedConditions.visibilityOf(element)).isDisplayed();
 	}
 
 	public boolean waitUntilElementIsSelected(WebElement element, int timeout) {

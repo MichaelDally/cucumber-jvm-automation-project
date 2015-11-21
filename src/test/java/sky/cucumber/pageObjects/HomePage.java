@@ -17,7 +17,7 @@ public class HomePage extends AbstractPageObject{
 		this.driver = super.getDriver();
 	}
 	private By BETTING_CELL_LOCATOR = By.cssSelector(".live-table .odds");
-	private By EXPAND_ALL_LINK = By.cssSelector("#live-bet-bar .collapsed");
+	private By EXPAND_ALL_LINK = By.cssSelector("#live-bet-bar .collapsed b span");
 	WebDriver driver;
 	Actions actions = new Actions(getDriver());
 

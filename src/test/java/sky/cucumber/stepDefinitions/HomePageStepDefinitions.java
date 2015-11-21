@@ -27,7 +27,6 @@ public class HomePageStepDefinitions extends AbstractBrowser {
 	@Given("^I have arrived on the website$")
 	public void i_have_arrived_on_the_website() throws Throwable {
 		driver.navigate().to(System.getProperty("url"));
-
 	}
 
 	@When("^I place \"([^\"]*)\" bets$")

@@ -293,17 +293,17 @@ table.data-table td {
                     <tr>
                         <td><a id="stats-User logs in" href="SkyLogin.feature.html">User logs in</a></td>
                                                 <td id="stats-number-scenarios-User logs in">1</td>
-                        <td id="stats-number-scenarios-passed-User logs in">1</td>
-                        <td id="stats-number-scenarios-failed-User logs in">0</td>
+                        <td id="stats-number-scenarios-passed-User logs in">0</td>
+                        <td id="stats-number-scenarios-failed-User logs in">1</td>
                         <td id="stats-number-steps-User logs in">3</td>
-                        <td id="stats-number-steps-passed-User logs in">3</td>
-                        <td id="stats-number-steps-failed-User logs in"    >0</td>
+                        <td id="stats-number-steps-passed-User logs in">2</td>
+                        <td id="stats-number-steps-failed-User logs in"      style="background-color:#FF0000;" >1</td>
                         <td id="stats-number-steps-skipped-User logs in"   >0</td>
                         <td id="stats-number-steps-pending-User logs in"   >0</td>
                         <td id="stats-number-steps-undefined-User logs in" >0</td>
                         <td id="stats-number-steps-missing-User logs in"   >0</td>
-                        <td id="stats-duration-User logs in" style="text-align:right;white-space:nowrap">07s 933ms</td>
-                        <td id="stats-status-User logs in" style="background-color: #00CE00;">passed</td></tr>
+                        <td id="stats-duration-User logs in" style="text-align:right;white-space:nowrap">4m 21s 204ms</td>
+                        <td id="stats-status-User logs in" style="background-color: #FF0000;">failed</td></tr>
 
                 </table>
 
@@ -312,18 +312,48 @@ table.data-table td {
         <div style="color:black;">
 
             <div class="feature-tags"><a href="wip.html">@wip</a></div>
-            <div class="passed"><div class="feature-line"><span class="feature-keyword">Feature:</span> User logs in</div></div>
+            <div class="failed"><div class="feature-line"><span class="feature-keyword">Feature:</span> User logs in</div></div>
             <div class="feature-description">In order to allow users access to their own account<br/>As a business<br/><span class="feature-action">I want to</span> provide login functionality to the customer</div>
 
                             <div class="feature-tags"></div>
-                <div class="passed"><span class="scenario-keyword">Scenario: </span> <span class="scenario-name">Display login options</span></div>
-                                  <div class="passed"><span class="step-keyword">Given  </span><span class="step-name">I have arrived on the website</span><span class="step-duration">05s 781ms</span></div>
+                <div class="failed"><span class="scenario-keyword">Scenario: </span> <span class="scenario-name">Display login options</span></div>
+                                  <div class="passed"><span class="step-keyword">Given  </span><span class="step-name">I have arrived on the website</span><span class="step-duration">3m 51s 034ms</span></div>
                     
                                       <div class="output-data"></div>
-                                  <div class="passed"><span class="step-keyword">When  </span><span class="step-name">I select login</span><span class="step-duration">180ms</span></div>
+                                  <div class="passed"><span class="step-keyword">When  </span><span class="step-name">I select login</span><span class="step-duration">135ms</span></div>
                     
                                       <div class="output-data"></div>
-                                  <div class="passed"><span class="step-keyword">Then  </span><span class="step-name">I should see the login options</span><span class="step-duration">01s 971ms</span></div>
+                                  <div class="failed"><span class="step-keyword">Then  </span><span class="step-name">I should see the login options</span><span class="step-duration">30s 033ms</span><div class="step-error-message"><pre class="step-error-message-content">org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"#SkyBetAccount"}
+Command duration or timeout: 30.03 seconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'W8150602', ip: '172.18.101.96', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_45'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities [{applicationCacheEnabled=true, rotatable=false, handlesAlerts=true, databaseEnabled=true, version=42.0, platform=WINDOWS, nativeEvents=false, acceptSslCerts=true, webStorageEnabled=true, locationContextEnabled=true, browserName=firefox, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true}]
+Session ID: d833c060-7fb9-4846-8bc4-232e3a542206
+*** Element info: {Using=css selector, value=#SkyBetAccount}
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:422)
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:647)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByCssSelector(RemoteWebDriver.java:482)
+	at org.openqa.selenium.By$ByCssSelector.findElement(By.java:430)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:345)
+	at sky.cucumber.pageObjects.LoginPage.isLoginFormPresent(LoginPage.java:30)
+	at sky.cucumber.stepDefinitions.LoginPageStepDefs.i_should_see_the_login_options(LoginPageStepDefs.java:33)
+	at âœ½.Then I should see the login options(SkyLogin.feature:11)
+Caused by: org.openqa.selenium.NoSuchElementException: Unable to locate element: {"method":"css selector","selector":"#SkyBetAccount"}
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '2.48.2', revision: '41bccdd10cf2c0560f637404c2d96164b67d9d67', time: '2015-10-09 13:08:06'
+System info: host: 'W8150602', ip: '172.18.101.96', os.name: 'Windows 8.1', os.arch: 'x86', os.version: '6.3', java.version: '1.8.0_45'
+Driver info: driver.version: unknown
+	at <anonymous class>.FirefoxDriver.prototype.findElementInternal_(file:///C:/WINDOWS/TEMP/anonymous7546761595933880340webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:10659)
+	at <anonymous class>.fxdriver.Timer.prototype.setTimeout/<.notify(file:///C:/WINDOWS/TEMP/anonymous7546761595933880340webdriver-profile/extensions/fxdriver@googlecode.com/components/driver-component.js:621)
+</pre></div></div>
                     
                                       <div class="output-data"></div>
                             
@@ -334,7 +364,7 @@ table.data-table td {
 <div class="container_12">
     <div class="grid_12 hr"></div>
     <div class="grid_12 footer">
-        <p style="text-align:center;"><a href="https://github.com/damianszczepanik/jenkins-cucumber-jvm-reports-plugin-java">Cucumber-JVM Jenkins Report Plugin</a> - version: cucumber-reporting-0.2.1 - 16-11-2015 09:27:05</p>
+        <p style="text-align:center;"><a href="https://github.com/damianszczepanik/jenkins-cucumber-jvm-reports-plugin-java">Cucumber-JVM Jenkins Report Plugin</a> - version: cucumber-reporting-0.2.1 - 19-11-2015 14:03:36</p>
     </div>
 </div>
 <div class="clear"></div>

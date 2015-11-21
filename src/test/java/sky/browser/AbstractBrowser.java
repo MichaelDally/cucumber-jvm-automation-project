@@ -7,10 +7,9 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.internal.ProfilesIni;
+import org.openqa.selenium.remote.SessionNotFoundException;
 
-import sky.interfaces.BrowserInterface;
-
-public class AbstractBrowser implements BrowserInterface {
+public class AbstractBrowser {
 	protected static WebDriver driver;
 
 	// This can be extended to return more browser types, e.g. Opera and Safari.
@@ -20,11 +19,7 @@ public class AbstractBrowser implements BrowserInterface {
 		try {
 			if (driver == null) {
 				if (browserType.equalsIgnoreCase("Firefox")) {
-					ProfilesIni profile = new ProfilesIni();
-					FirefoxProfile myProfile = profile.getProfile("default");
-					myProfile.setAcceptUntrustedCertificates(true);
-					myProfile.setAssumeUntrustedCertificateIssuer(true);
-					driver = new FirefoxDriver(myProfile);
+					driver = new FirefoxDriver();
 				} else if (browserType.equalsIgnoreCase("chrome")) {
 					System.setProperty("webdriver.chrome.driver",
 							"src/test/resources/chromedriver.exe");
@@ -40,8 +35,14 @@ public class AbstractBrowser implements BrowserInterface {
 		} finally {
 			// When all tests are complete, create a new process and close open
 			// browsers
+			if(driver != null){
+				try{
 			Runtime.getRuntime().addShutdownHook(
 					new Thread(new BrowserCleanup()));
+				}catch(SessionNotFoundException snfe){
+					System.out.println("Browsers closed.");
+				}
+			}
 		}
 	}
 

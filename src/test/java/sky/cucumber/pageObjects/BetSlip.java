@@ -12,16 +12,16 @@ public class BetSlip extends AbstractPageObject{
 	Synchroniser synchroniser = new Synchroniser();
 	
 	public BetSlip(WebDriver driver){
-		this.driver = super.getDriver();
+		this.driver = getDriver();
 	}
 	
-	private By BET_SLIP_CONTENT = By.cssSelector(".bet-slip .multi-list");
+	private By BET_SLIP_CONTENT = By.cssSelector(".bet-slip-content .pane");
 	
 	public WebElement getBetSlipContentLocator(){
 		return driver.findElement(BET_SLIP_CONTENT);
 	}
 	
 	public boolean isBetSlipVisible(){
-		return synchroniser.waitUntilElementDisplayed(getBetSlipContentLocator(), 10);
+		return driver.findElement(BET_SLIP_CONTENT).isDisplayed();
 	}
 }
