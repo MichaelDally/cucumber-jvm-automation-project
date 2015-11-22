@@ -25,6 +25,6 @@ public class BetSlip extends AbstractBrowser{
 	}
 	
 	public void waitUntilBetSlipVisible(){
-		synchroniser.isElementDisplayed(getBetSlipContentLocator(), 10);
+		synchroniser.waitUntilElementDisplayed(getBetSlipContentLocator(), 10);
 	}
 }
