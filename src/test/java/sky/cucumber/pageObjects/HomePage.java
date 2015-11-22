@@ -6,11 +6,8 @@ import java.util.Random;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
 import sky.browser.AbstractBrowser;
 import sky.synchroniser.Synchroniser;
@@ -81,7 +78,6 @@ public class HomePage extends AbstractBrowser{
 	public boolean isExpandAllLinkPresent(){
 		return driver.findElement(EXPAND_ALL_LINK).isEnabled() && driver.findElement(EXPAND_ALL_LINK).isDisplayed();
 	}
-
 	
 	public void clickRandomSportInNavPanelAndGetSelectedSportName(){
 		List<WebElement> availableSports = getAvailableSports();

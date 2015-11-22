@@ -1,11 +1,9 @@
 package sky.cucumber.pageObjects;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import sky.browser.AbstractBrowser;
-import sky.synchroniser.Synchroniser;
 
 public class LoginPage extends AbstractBrowser{	
 	public LoginPage() {
