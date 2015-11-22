@@ -9,7 +9,7 @@ public class LoginPage extends AbstractBrowser{
 	public LoginPage() {
 		super(driver);
 	}
-	private By LOGIN_LINK_LOCATOR = By.cssSelector(".js-account-bar__login");
+	private static final By LOGIN_LINK_LOCATOR = By.cssSelector(".js-account-bar__login");
 
 	
 	

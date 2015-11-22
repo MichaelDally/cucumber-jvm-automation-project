@@ -23,10 +23,10 @@ public class HomePage extends AbstractBrowser{
 	    this.synchroniser = new Synchroniser(driver);
 	}
 	private static final By BETTING_CELL_LOCATOR = By.cssSelector(".live-table .odds");
-	private static final By EXPAND_ALL_LINK = By.cssSelector("#live-bet-bar .collapsed");
-	private static final By ALL_AVAILABLE_SPORTS = By.cssSelector(".section>ul>a");
-	private static final By SPORT_PAGE_HEADER = By.cssSelector(".content-head h1");
-	private static final By ODDS_LOCATOR = By.cssSelector(".oc.oc-odds-desc");
+	private static final By EXPAND_ALL_LINK_LOCATOR = By.cssSelector("#live-bet-bar .collapsed");
+	private static final By ALL_AVAILABLE_SPORTS_LINK_LOCATOR = By.cssSelector(".section>ul>a");
+	private static final By SPORT_PAGE_HEADER_LOCATOR = By.cssSelector(".content-head h1");
+	private static final By ODDS_LOCATOR_LINK_LOCATOR = By.cssSelector(".oc.oc-odds-desc");
 
 	public String selectedSportName = "";
 	
@@ -38,11 +38,11 @@ public class HomePage extends AbstractBrowser{
 	}
 	
 	private List<WebElement> getAvailableSports(){
-		return driver.findElements(ALL_AVAILABLE_SPORTS);		
+		return driver.findElements(ALL_AVAILABLE_SPORTS_LINK_LOCATOR);		
 	}
 	
 	private WebElement getExpandAllLink(){
-		return driver.findElement(EXPAND_ALL_LINK);
+		return driver.findElement(EXPAND_ALL_LINK_LOCATOR);
 	}
 	
 	private List<WebElement> getRandomSelections(int numberOfSelectionsToClickOn){
@@ -57,7 +57,7 @@ public class HomePage extends AbstractBrowser{
 	}
 	
 	private WebElement getPageHeader(){
-		return driver.findElement(SPORT_PAGE_HEADER);
+		return driver.findElement(SPORT_PAGE_HEADER_LOCATOR);
 	}
 	
 	public void clickRandomSelections(int numberOfSelectionsToClickOn) throws InterruptedException{
@@ -76,7 +76,7 @@ public class HomePage extends AbstractBrowser{
 	}
 	
 	public boolean isExpandAllLinkPresent(){
-		return driver.findElement(EXPAND_ALL_LINK).isEnabled() && driver.findElement(EXPAND_ALL_LINK).isDisplayed();
+		return driver.findElement(EXPAND_ALL_LINK_LOCATOR).isDisplayed();
 	}
 	
 	public void clickRandomSportInNavPanelAndGetSelectedSportName(){
@@ -96,6 +96,6 @@ public class HomePage extends AbstractBrowser{
 	}
 
 	private int getListOfOdds() {
-		return driver.findElements(ODDS_LOCATOR).size();
+		return driver.findElements(ODDS_LOCATOR_LINK_LOCATOR).size();
 	}
 }
