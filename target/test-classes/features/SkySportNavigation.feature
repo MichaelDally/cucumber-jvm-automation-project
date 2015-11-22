@@ -1,4 +1,4 @@
-@complete
+@regression
 Feature: User browses sports
 In order to view odds on sports
 As a customer

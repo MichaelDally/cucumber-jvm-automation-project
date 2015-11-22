@@ -11,9 +11,10 @@ import org.openqa.selenium.remote.UnreachableBrowserException;
 public class AbstractBrowser {
 	protected static WebDriver driver;
 
-	// This can be extended to return more browser types, e.g. Opera and Safari.
-	// If the driver is 'Null', create a new instance of the browser, if it's
-	// not null, use current browser
+	public AbstractBrowser(WebDriver driver){
+		driver = getDriver(System.getProperty("browser"));
+	}
+	//FIXME: This could be improved if re-written into a "case" statement
 	public static WebDriver getDriver(String browserType) {
 		try {
 			if (driver == null) {

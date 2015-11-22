@@ -3,20 +3,27 @@ package sky.cucumber.pageObjects;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-import org.openqa.selenium.JavascriptExecutor;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-import sky.abstractPageObject.AbstractPageObject;
+import sky.browser.AbstractBrowser;
 import sky.synchroniser.Synchroniser;
 
-public class HomePage extends AbstractPageObject{
+public class HomePage extends AbstractBrowser{
+	
+	Actions actions;
+    Synchroniser synchroniser;
 
-	public HomePage(WebDriver driver){
-		this.driver = super.getDriver();
+	public HomePage(){
+		super(driver);
+		this.actions = new Actions(driver);
+	    this.synchroniser = new Synchroniser(driver);
 	}
 	private static final By BETTING_CELL_LOCATOR = By.cssSelector(".live-table .odds");
 	private static final By EXPAND_ALL_LINK = By.cssSelector("#live-bet-bar .collapsed");
@@ -26,10 +33,7 @@ public class HomePage extends AbstractPageObject{
 
 	public String selectedSportName = "";
 	
-	WebDriver driver;
-	Actions actions = new Actions(getDriver());
-
-	Synchroniser synchroniser = new Synchroniser();
+	
 	
 	
 	private List<WebElement> getBettingCells(){
@@ -59,9 +63,9 @@ public class HomePage extends AbstractPageObject{
 		return driver.findElement(SPORT_PAGE_HEADER);
 	}
 	
-	public void clickRandomSelections(int numberOfSelectionsToClickOn){
+	public void clickRandomSelections(int numberOfSelectionsToClickOn) throws InterruptedException{
 		for (WebElement selection : getRandomSelections(numberOfSelectionsToClickOn)){
-			synchroniser.waitUntilElementDisplayed(selection,10);
+			synchroniser.waitUntilAjaxRequestCompleted(10);
 			actions.moveToElement(selection);
 			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", selection);
 			selection.click();
@@ -78,9 +82,6 @@ public class HomePage extends AbstractPageObject{
 		return driver.findElement(EXPAND_ALL_LINK).isEnabled() && driver.findElement(EXPAND_ALL_LINK).isDisplayed();
 	}
 
-	public void selectASport() {
-		
-	}
 	
 	public void clickRandomSportInNavPanelAndGetSelectedSportName(){
 		List<WebElement> availableSports = getAvailableSports();

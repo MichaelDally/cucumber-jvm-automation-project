@@ -4,19 +4,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import sky.abstractPageObject.AbstractPageObject;
+import sky.browser.AbstractBrowser;
 import sky.synchroniser.Synchroniser;
 
-public class LoginPage extends AbstractPageObject{	
-	WebDriver driver;
-	Synchroniser synchroniser = new Synchroniser();
-
+public class LoginPage extends AbstractBrowser{	
+	public LoginPage() {
+		super(driver);
+	}
 	private By LOGIN_LINK_LOCATOR = By.cssSelector(".js-account-bar__login");
-	private By LOGIN_FORM_DIV_LOCATOR = By.cssSelector("#SkyBetAccount");
 
-	public LoginPage(WebDriver driver){
-		this.driver = super.getDriver();
-		}
+	
 	
 	private WebElement getLoginLinkLocator(){
 		return driver.findElement(LOGIN_LINK_LOCATOR);
@@ -24,7 +21,6 @@ public class LoginPage extends AbstractPageObject{
 
 	public void clickLoginLinkLocator(){
 		getLoginLinkLocator().click();
-		synchroniser.waitUntilAjaxRequestCompleted(10);
 	}
 
 	public boolean isLoginFormPresent() {

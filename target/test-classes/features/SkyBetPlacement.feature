@@ -1,4 +1,4 @@
-@complete
+@regression
 Feature: User places bets
 In order to place bets
 As a customer

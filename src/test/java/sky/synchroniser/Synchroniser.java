@@ -1,6 +1,6 @@
 package sky.synchroniser;
 
-import org.openqa.selenium.By;
+import org.openqa.selenium.ElementNotVisibleException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -11,47 +11,40 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import sky.browser.AbstractBrowser;
 
 public class Synchroniser extends AbstractBrowser {
-	protected static WebDriverWait wait;
+	WebDriverWait wait;
 
-	protected WebDriver driver = getDriver(System.getProperty("browser"));
-
-	public WebDriver getDriver() {
-		return driver;
+	public Synchroniser(WebDriver driver) {
+		super(driver);
 	}
 
-	public boolean waitUntilElementClickable(WebElement element, int timeout) {
+	public void isElementDisplayed(WebElement element, int timeout) {
 		WebDriverWait wait = new WebDriverWait(driver, timeout);
-		return wait.until(ExpectedConditions.elementToBeClickable(element))
-				.isEnabled();
+		if (wait.until(ExpectedConditions.visibilityOf(element)).isDisplayed() == false) {
+			throw new ElementNotVisibleException(element + " was not found.");
+		}
 	}
-
-	public boolean waitUntilElementDisplayed(WebElement element, int timeout) {
+	
+	public void isElementSelected(WebElement element, int timeout) {
 		WebDriverWait wait = new WebDriverWait(driver, timeout);
-		return wait.until(ExpectedConditions.visibilityOf(element)).isDisplayed();
+		if (wait.until(ExpectedConditions.elementSelectionStateToBe(element, false))) {
+			throw new ElementNotVisibleException(element + " not selectable.");
+		}
 	}
 
-	public boolean waitUntilElementIsSelected(WebElement element, int timeout) {
-		WebDriverWait wait = new WebDriverWait(driver, timeout);
-		return wait.until(ExpectedConditions.elementToBeSelected(element));
+	//FIXME: not sure if there's a nicer way to do this...
+	public void waitUntilAjaxRequestCompleted(int timeout)
+			throws InterruptedException {
+		for (timeout = 0;; timeout++) {
+			if (timeout >= 30)
+				;
+			{
+				Boolean ajaxIsComplete = (Boolean) ((JavascriptExecutor) driver)
+						.executeScript("return jQuery.active == 0");
+				if (ajaxIsComplete) {
+					break;
+				}
+				Thread.sleep(100);
+			}
+		}
 	}
-
-	public boolean waitUntilElementIsHidden(WebElement element, int timeout) {
-		WebDriverWait wait = new WebDriverWait(driver, timeout);
-		return !wait.until(ExpectedConditions.visibilityOf(element))
-				.isDisplayed();
-	}
-
-	//FIXME: Not keen on this method as it returns a void. Need to return boolean value, ideally.
-	public void waitUntilAjaxRequestCompleted(int timeout) {
-		new WebDriverWait(driver, timeout)
-				.until(new ExpectedCondition<Boolean>() {
-					public Boolean apply(WebDriver driver) {
-						JavascriptExecutor js = (JavascriptExecutor) driver;
-						return (Boolean) js
-								.executeScript("return jQuery.active == 0");
-					}
-				});
-	}
-
-
 }

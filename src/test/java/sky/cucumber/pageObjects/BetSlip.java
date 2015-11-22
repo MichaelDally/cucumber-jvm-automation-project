@@ -1,18 +1,17 @@
 package sky.cucumber.pageObjects;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-import sky.abstractPageObject.AbstractPageObject;
+import sky.browser.AbstractBrowser;
 import sky.synchroniser.Synchroniser;
 
-public class BetSlip extends AbstractPageObject{
-	WebDriver driver;
-	Synchroniser synchroniser = new Synchroniser();
+public class BetSlip extends AbstractBrowser{
+	Synchroniser synchroniser;
 	
-	public BetSlip(WebDriver driver){
-		driver = super.getDriver();
+	public BetSlip(){
+		super(driver);
+		this.synchroniser = new Synchroniser(driver);
 	}
 	
 	private By BET_SLIP_CONTENT = By.cssSelector(".bet-slip-content .pane");
@@ -23,5 +22,9 @@ public class BetSlip extends AbstractPageObject{
 	
 	public boolean isBetSlipVisible(){
 		return driver.findElement(BET_SLIP_CONTENT).isDisplayed();
+	}
+	
+	public void waitUntilBetSlipVisible(){
+		synchroniser.isElementDisplayed(getBetSlipContentLocator(), 10);
 	}
 }

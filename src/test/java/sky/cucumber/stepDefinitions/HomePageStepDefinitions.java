@@ -4,7 +4,6 @@ import static org.junit.Assert.assertTrue;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
 import sky.browser.AbstractBrowser;
@@ -18,15 +17,19 @@ import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 
 public class HomePageStepDefinitions extends AbstractBrowser {
+	
+	public HomePageStepDefinitions(){
+		super(driver);
+	}
 
 	private HomePage homePage;
 	private BetSlip betSlip;
-	private WebDriver driver = getDriver(System.getProperty("browser"));
 
 	@Before
 	public void setUp() {
 		homePage = PageFactory.initElements(driver, HomePage.class);
 		betSlip = PageFactory.initElements(driver, BetSlip.class);
+		driver.manage().deleteAllCookies();
 	}
 
 	@Given("^I have arrived on the website$")
@@ -42,7 +45,8 @@ public class HomePageStepDefinitions extends AbstractBrowser {
 
 	@Then("^the betslip should appear$")
 	public void the_betslip_should_appear() {
-		assertTrue(betSlip.isBetSlipVisible());
+		betSlip.waitUntilBetSlipVisible();
+		assertTrue("Betslip not found", betSlip.isBetSlipVisible());
 	}
 
 	@When("^I select a sport$")
