@@ -2,6 +2,7 @@ package sky.browser;
 
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.NoSuchSessionException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -22,7 +23,7 @@ public class AbstractBrowser {
 					driver = new FirefoxDriver();
 				} else if (browserType.equalsIgnoreCase("chrome")) {
 					System.setProperty("webdriver.chrome.driver",
-							"src/test/resources/chromedriver.exe");
+							"src/test/resources/chromedriver");
 					driver = new ChromeDriver();
 				}
 				driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
@@ -39,7 +40,7 @@ public class AbstractBrowser {
 				try{
 			Runtime.getRuntime().addShutdownHook(
 					new Thread(new BrowserCleanup()));
-				}catch(SessionNotFoundException snfe){
+				}catch(NoSuchSessionException nsse){
 					System.out.println("Browsers closed.");
 				}
 			}
@@ -58,7 +59,7 @@ public class AbstractBrowser {
 		public void run() {
 			try{
 			driver.close();
-			}catch(SessionNotFoundException snfe){
+			}catch(NoSuchSessionException nsse){
 				//do nothing
 			}catch(UnreachableBrowserException ube){
 				//do nothing

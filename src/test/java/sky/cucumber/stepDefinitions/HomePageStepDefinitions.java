@@ -6,9 +6,12 @@ import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.support.PageFactory;
 
+import com.jayway.restassured.http.ContentType;
+
 import sky.browser.AbstractBrowser;
 import sky.cucumber.pageObjects.BetSlip;
 import sky.cucumber.pageObjects.HomePage;
+import sky.restRequests.RestServices;
 import cucumber.api.Scenario;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
@@ -41,6 +44,7 @@ public class HomePageStepDefinitions extends AbstractBrowser {
 	public void i_place_bets(int numberOfSelections) throws Throwable {
 		homePage.clickExpandAllLinkIfPresent();
 		homePage.clickRandomSelections(numberOfSelections);
+
 	}
 
 	@Then("^the betslip should appear$")
@@ -66,6 +70,8 @@ public class HomePageStepDefinitions extends AbstractBrowser {
 		assertTrue("Sport page not loaded did not contain " + homePage.selectedSportName,
 				homePage.getSportPageTitle().contains(homePage.selectedSportName));
 	}
+	
+	
 
 	@After
 	public void attachScreenshotToReport(Scenario scenario) {

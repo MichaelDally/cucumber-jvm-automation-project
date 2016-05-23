@@ -1,8 +1,10 @@
-c:\Users\Michael Dally\workspace\sky.cucumber.automation\src\test\java\sky\cucumber\stepDefinitions\HomePageStepDefinitions.java
-c:\Users\Michael Dally\workspace\sky.cucumber.automation\src\test\java\sky\cucumber\stepDefinitions\LoginPageStepDefs.java
-c:\Users\Michael Dally\workspace\sky.cucumber.automation\src\test\java\sky\browser\AbstractBrowser.java
-c:\Users\Michael Dally\workspace\sky.cucumber.automation\src\test\java\sky\cucumber\automation\RunTest.java
-c:\Users\Michael Dally\workspace\sky.cucumber.automation\src\test\java\sky\cucumber\pageObjects\LoginPage.java
-c:\Users\Michael Dally\workspace\sky.cucumber.automation\src\test\java\sky\cucumber\pageObjects\HomePage.java
-c:\Users\Michael Dally\workspace\sky.cucumber.automation\src\test\java\sky\synchroniser\Synchroniser.java
-c:\Users\Michael Dally\workspace\sky.cucumber.automation\src\test\java\sky\cucumber\pageObjects\BetSlip.java
+/Users/mda48/git/cucumber-jvm-automation-project/src/test/java/sky/cucumber/stepDefinitions/LoginPageStepDefs.java
+/Users/mda48/git/cucumber-jvm-automation-project/src/test/java/sky/restRequests/RestServices.java
+/Users/mda48/git/cucumber-jvm-automation-project/src/test/java/sky/cucumber/stepDefinitions/InstaStepDefs.java
+/Users/mda48/git/cucumber-jvm-automation-project/src/test/java/sky/browser/AbstractBrowser.java
+/Users/mda48/git/cucumber-jvm-automation-project/src/test/java/sky/cucumber/pageObjects/LoginPage.java
+/Users/mda48/git/cucumber-jvm-automation-project/src/test/java/sky/cucumber/stepDefinitions/HomePageStepDefinitions.java
+/Users/mda48/git/cucumber-jvm-automation-project/src/test/java/sky/cucumber/pageObjects/BetSlip.java
+/Users/mda48/git/cucumber-jvm-automation-project/src/test/java/sky/cucumber/automation/RunTest.java
+/Users/mda48/git/cucumber-jvm-automation-project/src/test/java/sky/synchroniser/Synchroniser.java
+/Users/mda48/git/cucumber-jvm-automation-project/src/test/java/sky/cucumber/pageObjects/HomePage.java
